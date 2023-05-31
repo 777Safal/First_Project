@@ -4,15 +4,10 @@ import {threeimg } from '../../Resources/Images/HomeImage'
 
 function Test() {
   return (
-   <div>
-    {
-        threeimg.map((val,i)=>{
-            return <div key={i}>
-                <img src={threeimg[i].name}/>
-                <div>{you[i].name}</div>
-            </div>
-        })
-    }
+   <div className='w-[400px] h-[350px]' style={{
+    backgroundImage:'url(https://img.freepik.com/premium-vector/turtle-08_877288-8.jpg?size=626&ext=jpg)'
+   }}> 
+    ddkjakj
    </div>
   )
 }
