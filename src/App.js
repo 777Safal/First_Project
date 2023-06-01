@@ -10,6 +10,7 @@ import RecentEvent from './Components/Page Component/Home/RecentEvent';
 import Apply from './Components/Page Component/Home/Apply';
 import News from './Components/Page Component/Home/News';
 import OurCourse from './Components/Page Component/Course Page/OurCourse';
+import Popular2 from './Components/Page Component/Course Page/Popular2';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
       {/* <RecentEvent/> */}
       {/* <Apply/> */}
       {/* <News/> */}
-      <OurCourse/>
+      {/* <OurCourse/> */}
+      <Popular2/>
     </div>
   );
 }
