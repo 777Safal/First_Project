@@ -16,8 +16,8 @@ function App() {
   return (
     <div className=''>
       {/* <Toolbar/> */}
-      {/* <Scholarship/>
-      // <Popular/> */}
+       {/* <Scholarship/> */}
+       {/* <Popular/>  */}
       {/* <HomeImage/> */}
       {/* <Test/> */}
       {/* <Getstart/> */}
