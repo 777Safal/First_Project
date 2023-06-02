@@ -11,6 +11,8 @@ import Apply from './Components/Page Component/Home/Apply';
 import News from './Components/Page Component/Home/News';
 import OurCourse from './Components/Page Component/Course Page/OurCourse';
 import Popular2 from './Components/Page Component/Course Page/Popular2';
+import Contact from './Components/Page Component/Contactpage/Contact';
+import GetInTouch from './Components/Page Component/Contactpage/GetInTouch';
 
 
 function App() {
@@ -27,7 +29,9 @@ function App() {
       {/* <Apply/> */}
       {/* <News/> */}
       {/* <OurCourse/> */}
-      <Popular2/>
+      {/* <Popular2/> */}
+      {/* <Contact/> */}
+      <GetInTouch/>
     </div>
   );
 }
