@@ -12,8 +12,11 @@ module.exports = {
         hov:'#31D9F0',
         popular:'#201D48',
         linecolor: '#000000B3',
-        d1:'#3F92DF',        
-      },
+        d1:'#3F92DF',   
+        primary:'#F56700',
+        success:'#21E2E2',
+        info:'#3266CB',
+        },
       fontSize:{
         xx:'13px',
         ab:'58px',

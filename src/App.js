@@ -13,7 +13,18 @@ import OurCourse from './Components/Page Component/Course Page/OurCourse';
 import Popular2 from './Components/Page Component/Course Page/Popular2';
 import Contact from './Components/Page Component/Contactpage/Contact';
 import GetInTouch from './Components/Page Component/Contactpage/GetInTouch';
-
+import Event from './Components/Page Component/Event/Event';
+import Howtospeak from './Components/Page Component/EventDetails/Howtospeak';
+import SampleButtons from './Components/Page Component/Elements/SampleButtons';
+import Textsample from './Components/Page Component/Elements/Textsample';
+import Element from './Components/Page Component/Elements/Element';
+import Aligned from './Components/Page Component/Elements/Aligned';
+import Defination from './Components/Page Component/Elements/Defination';
+import BlockQuotes from './Components/Page Component/Elements/BlockQuotes';
+import ImageGallery from './Components/Page Component/Elements/ImageGallery';
+import FormElement from './Components/Page Component/Elements/FormElement';
+import Blog from './Components/Page Component/Blog page/Blog';
+import GoogleImg from './Components/Page Component/Blog page/GoogleImg';
 
 function App() {
   return (
@@ -31,7 +42,19 @@ function App() {
       {/* <OurCourse/> */}
       {/* <Popular2/> */}
       {/* <Contact/> */}
-      <GetInTouch/>
+      {/* <GetInTouch/> */}
+      {/* <Howtospeak/> */}
+      {/* <SampleButtons/> */}
+      {/* <Textsample/> */}
+      {/* <Element/> */}
+      {/* <Event/> */}
+      {/* <Aligned/> */}
+      {/* <Defination/> */}
+      {/* <BlockQuotes/> */}
+      {/* <ImageGallery/> */}
+      {/* <FormElement/> */}
+      {/* <Blog/> */}
+      <GoogleImg/>
     </div>
   );
 }
