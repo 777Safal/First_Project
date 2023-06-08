@@ -52,9 +52,9 @@ function App() {
       {/* <Defination/> */}
       {/* <BlockQuotes/> */}
       {/* <ImageGallery/> */}
-      {/* <FormElement/> */}
+      <FormElement/>
       {/* <Blog/> */}
-      <GoogleImg/>
+      {/* <GoogleImg/> */}
     </div>
   );
 }
