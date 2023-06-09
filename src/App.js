@@ -25,6 +25,7 @@ import ImageGallery from './Components/Page Component/Elements/ImageGallery';
 import FormElement from './Components/Page Component/Elements/FormElement';
 import Blog from './Components/Page Component/Blog page/Blog';
 import GoogleImg from './Components/Page Component/Blog page/GoogleImg';
+import Footermain from './Components/Footer/Footermain';
 
 function App() {
   return (
@@ -52,9 +53,10 @@ function App() {
       {/* <Defination/> */}
       {/* <BlockQuotes/> */}
       {/* <ImageGallery/> */}
-      <FormElement/>
+      {/* <FormElement/> */}
       {/* <Blog/> */}
       {/* <GoogleImg/> */}
+      <Footermain/>
     </div>
   );
 }

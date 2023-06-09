@@ -37,6 +37,10 @@ function FormElement() {
     const msg=[
         {type:'text',placeholder:'Message', identiy:'msg'}
     ]
+    const box=[
+        {}
+    ]
+
   return (
     <div className='flex justify-center'>
         <div className='w-9/12 flex'>
@@ -89,7 +93,9 @@ function FormElement() {
             </div>
             <div className='w-2/5 bg-blue-300'>
             <div className='text-xl text-maincolor font-poping tracking-widest font-bold mb-7'>{headings[0].h2}</div>
-            <div></div>
+            <div>
+
+            </div>
             </div>
         </div>
     </div>
