@@ -6,9 +6,9 @@ import {AiOutlineGooglePlus} from 'react-icons/ai'
 import {Form,Field,Formik,ErrorMessage} from 'formik'
 import * as yup from 'yup'
 
-// const schema=yup.object().shape({
-//     email:yup.string().required('Enter your email id')
-// })
+const schema=yup.object().shape({
+    email:yup.string().required('Enter your email id')
+})
 function Footermain() {
     const data=[
         {h:'About us',h1:'Online earning',h2:'About us',h3:'Careers',h4:'Press center',h5:'Become an instructor'},
@@ -16,11 +16,6 @@ function Footermain() {
         {h:'Study',h1:'Online earning',h2:'About us',h3:'Careers',h4:'Press center',h5:'Become an instructor'},
         {h:'Support',h1:'Online earning',h2:'About us',h3:'Careers',h4:'Press center',h5:'Become an instructor'},
     ]
-    // const formdata=[
-    //     {label:'Stay updated'},
-    //     {type:'text',placeholder:'Email Address'},
-    //     {type:'button' ,placeholder:'SubscribeNow'}
-    // ]
     const update=[{h1:'Stay updated',
             h2:'Subscribe Now',
             p:'Copyright ©2022 All rights reserved | This template is made by sartungi '}]
@@ -29,7 +24,7 @@ function Footermain() {
     ]
 
   return (
-    <div className='w-full pl-28 pt-24 pr-64 bg-footer '>
+    <div className='w-full pl-28 pt-12 pr-64 bg-footer '>
         <div className='w-full text-white font-poping tracking-wide pr-14 '>
         {/* update section */}
         <div className='w-full flex mb-10'>
@@ -39,7 +34,7 @@ function Footermain() {
                 initialValues={{
                     email:'',
                 }} 
-                // validationSchema={schema}
+                validationSchema={schema}
                     onSubmit={(values)=>{
                         console.log(values)
                     }}>
@@ -47,8 +42,8 @@ function Footermain() {
                             return <Form onSubmit={handleSubmit}>
                                 <div className='flex pr-16'>
                                     <div className='w-4/6'>
-                                        <Field type={formdata[0].type} placeholder={formdata[0].placeholder} name={formdata[0].identiy} className='w-full pl-5 py-2'/>
-                                        {/* <ErrorMessage type={formdata[0].identiy} component={'div'} /> */}
+                                        <Field type={formdata[0].type} placeholder={formdata[0].placeholder} name={formdata[0].identiy} className='w-full pl-5 py-2 outline-none'/>
+                                        <ErrorMessage name={formdata[0].identiy} component={'div'} />
                                     </div>
                                     <div className='w-2/6   '>
                                         <button className='w-full bg-scholarship1 py-2'>{update[0].h2}</button>
@@ -85,7 +80,7 @@ function Footermain() {
                 </div>
             })}
         </div>
-        <div className='py-16'>
+        <div className='py-12'>
             <div className='text-xs font-thin'>{update[0].p}</div>
         </div>
         </div>

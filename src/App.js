@@ -43,7 +43,7 @@ function App() {
       {/* <OurCourse/> */}
       {/* <Popular2/> */}
       {/* <Contact/> */}
-      {/* <GetInTouch/> */}
+      <GetInTouch/>
       {/* <Howtospeak/> */}
       {/* <SampleButtons/> */}
       {/* <Textsample/> */}
@@ -56,7 +56,7 @@ function App() {
       {/* <FormElement/> */}
       {/* <Blog/> */}
       {/* <GoogleImg/> */}
-      <Footermain/>
+      {/* <Footermain/> */}
     </div>
   );
 }
