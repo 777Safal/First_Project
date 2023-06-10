@@ -26,6 +26,11 @@ import FormElement from './Components/Page Component/Elements/FormElement';
 import Blog from './Components/Page Component/Blog page/Blog';
 import GoogleImg from './Components/Page Component/Blog page/GoogleImg';
 import Footermain from './Components/Footer/Footermain';
+import Eventtop from './Components/Page Component/Event/Eventtop';
+import Eventdetails from './Components/Page Component/EventDetails/Eventdetails';
+import Contacttop from './Components/Page Component/Contactpage/Contacttop';
+import Apply2 from './Components/Page Component/Admission/Apply2';
+import Eventadmission from './Components/Page Component/Admission/Eventadmission';
 
 function App() {
   return (
@@ -43,12 +48,18 @@ function App() {
       {/* <OurCourse/> */}
       {/* <Popular2/> */}
       {/* <Contact/> */}
-      <GetInTouch/>
+      {/* <Apply/> */}
+      {/* <Apply2/> */}
+      {/* <Eventadmission/> */}
+      {/* <Contacttop/> */}
+      {/* <GetInTouch/> */}
       {/* <Howtospeak/> */}
       {/* <SampleButtons/> */}
       {/* <Textsample/> */}
       {/* <Element/> */}
       {/* <Event/> */}
+      {/* <Eventtop/>  */}
+      {/* <Eventdetails/> */}
       {/* <Aligned/> */}
       {/* <Defination/> */}
       {/* <BlockQuotes/> */}
