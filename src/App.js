@@ -3,7 +3,6 @@ import Toolbar from './Components/Navigation/Toolbar';
 import Popular from './Components/Page Component/Home/Popular';
 import Scholarship from './Components/Page Component/Home/Scholarship';
 import HomeImage from './Components/Resources/Images/HomeImage';
-import Test from './Components/Page Component/Home/Test';
 import Getstart from './Components/Page Component/Home/Getstart';
 import Latestcourse from './Components/Page Component/Home/Latestcourse';
 import RecentEvent from './Components/Page Component/Home/RecentEvent';
@@ -47,14 +46,14 @@ function App() {
       {/* <Apply/> */}
       {/* <News/> */}
       {/* <OurCourse/> */}
-      <Popular2/>
+      {/* <Popular2/> */}
       {/* <Contact/> */}
       {/* <Apply/> */}
       {/* <Apply2/> */}
       {/* <Eventadmission/> */}
       {/* <Contacttop/> */}
       {/* <GetInTouch/> */}
-      {/* <Howtospeak/> */}
+      <Howtospeak/>
       {/* <SampleButtons/> */}
       {/* <Textsample/> */}
       {/* <Element/> */}
@@ -70,7 +69,7 @@ function App() {
       {/* <GoogleImg/> */}
       {/* <Footermain/> */}
     </div>
-  );
+  )
 }
 
 export default App;

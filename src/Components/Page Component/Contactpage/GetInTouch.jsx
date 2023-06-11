@@ -13,8 +13,10 @@ import {IoMdPhonePortrait} from 'react-icons/io'
 // })
 
 function GetInTouch() {
-    const formdata=[
+    const msgform=[
         { type:'text',placeholder:'Message',identiy:'msg' },
+    ]
+    const formdata=[
         { type:'text',placeholder:'Enter your name',identiy:'name' },
         { type:'email',placeholder:'Email',identiy:'mail' },
         { type:'text',placeholder:'Enter subject',identiy:'subject' },
@@ -26,10 +28,10 @@ function GetInTouch() {
     ]
     return (
     <div className='w-full flex justify-center'>
-        <div className='w-10/12  bg-red-500'>
-            <div className='text-maincolor bg-yellow-400 text-xl font-poping font-bold'>Get in touch</div>
-            <div className='flex w-full bg-green-900'>
-                <div className='w-2/3'>
+        <div className='w-10/12'>
+            <div className='text-maincolor text-xl font-poping font-bold'>Get in touch</div>
+            <div className='flex w-full'>
+                <div className='w-2/3 mt-10'>
                     <Formik
                     initialValues={{
                         msg:'',
@@ -44,17 +46,17 @@ function GetInTouch() {
                     >
                 {({handleSubmit})=>{
                     return <Form onSubmit={handleSubmit}>
-                    <div className='bg-blue-700 w-ull  pr-16'>
+                    <div className='w-full  pr-16'>
                         <div >
-                            <textarea type={formdata[0].type} name={formdata[0].identiy} placeholder={formdata[0].placeholder} className='w-full border h-96 p-3 text-gray-500 text-base font-poping border-gray-500 outline-none'/>
+                            <textarea type={msgform[0].type} name={msgform[0].identiy} placeholder={msgform[0].placeholder} className='w-full border h-96 p-3 text-gray-500 text-base font-poping border-gray-500 outline-none'/>
                         </div> 
-                        <div className='grid grid-cols-2 gap-10'>
-                            <div><Field type={formdata[1].type} name={formdata[1].identiy} placeholder={formdata[1].placeholder} className='w-full h-11 border border-gray-500 outline-none'/>
-                                <ErrorMessage name={formdata[1].identiy} component={'div'} className='text-red-800'/>
-                            </div>
-
-                            <div><Field type={formdata[2].type} name={formdata[2].identiy} placeholder={formdata[2].placeholder}/></div>
-                            <div><Field type={formdata[3].type} name={formdata[3].identiy} placeholder={formdata[3].placeholder}/></div>                
+                        <div className='grid grid-cols-2 gap-10 mt-10'>
+                            {formdata.map((val,i)=>{
+                                return <div key={i} >
+                                    <Field type={val.type} name={val.identiy} placeholder={val.placeholder} className='w-full py-3 pl-3 outline-none border border-gray-500'/>
+                                </div>
+                                
+                            })}
                         </div>
                     </div>   
                     </Form>

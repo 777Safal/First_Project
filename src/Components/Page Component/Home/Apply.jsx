@@ -49,7 +49,7 @@ const applic=[
         backgroundSize:'cover'
     }}>
         <Formik
-        ijnitalValues={{
+        initalValues={{
             firstname:'',
             lastname:'',
             phnumber:'',
