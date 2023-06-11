@@ -26,17 +26,17 @@ function Howtospeak() {
             <div className='w-2/3 pl-12 text-gray-500'>
                 <div>
                   <div className='text-black text-3xl font-aaaa tracking-widest'>{data[0].h1}</div>
-                  <div className='flex font-aaaa'>
+                  <div className='flex font-aaaa mt-1'>
                   {time.map((val,i)=>{
-                      return <div key={i} className='flex'>
-                        <div>{val.icon}</div>
+                      return <div key={i} className='flex mr-28 font-bbbb text-sm tracking-wide font-normal'>
+                        <div className='flex items-start mr-1 text-xl'>{val.icon}</div>
                         <div>{val.h1}</div>
                       </div>
                     })}
                   </div>
                 </div>
-                <div className='w-[500px] bg-red-300 text-lg tracking-wider text-left font-bbbb font-medium'>{data[0].p}</div>
-                <div><button className=''>{data[0].h2}</button></div>
+                <div className='w-[600px] h-[200px] mt-28 mb-10 bg-red-300 tracking-widest text-left font-bbbb font-medium'>{data[0].p}</div>
+                <div><button className='py-3 px-10 border border-hov'>{data[0].h2}</button></div>
             </div>
 
         </div>
