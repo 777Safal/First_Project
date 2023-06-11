@@ -18,7 +18,7 @@ module.exports = {
         info:'#3266CB',
         footer:'rgba(12, 18, 67, 0.8)',
         facebook:'#3453C0',
-        twit:'#CD2121'
+        twit:'#CD2121',
         },
       fontSize:{
         xx:'13px',

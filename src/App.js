@@ -32,6 +32,7 @@ import Contacttop from './Components/Page Component/Contactpage/Contacttop';
 import Apply2 from './Components/Page Component/Admission/Apply2';
 import Eventadmission from './Components/Page Component/Admission/Eventadmission';
 
+
 function App() {
   return (
     <div className=''>
@@ -46,7 +47,7 @@ function App() {
       {/* <Apply/> */}
       {/* <News/> */}
       {/* <OurCourse/> */}
-      {/* <Popular2/> */}
+      <Popular2/>
       {/* <Contact/> */}
       {/* <Apply/> */}
       {/* <Apply2/> */}
