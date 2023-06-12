@@ -36,14 +36,15 @@ function ReplyForm() {
                         <div className='w-3/5'>
                             {data.map((val,i)=>{
                                 
-                                    if ((val.identiy==='name')||(val.identiy==='email')){
-                                       return <div key={i} className='flex justify-between'>
+                                    if ((val.identiy==='cmt')||(val.identiy==='website')){
+                                       return <div key={i} className='flex'>
                                             <Field type={val.type} name={val.identiy} placeholder={val.placeholder} className='w-1/2'/>
                                         </div>
                                     }
                                     else{
                                         return <div key={i}>
                                         <Field type={val.type} name={val.identiy} placeholder={val.placeholder}/>
+                                        
                                         </div>
                                     }
                             })}
