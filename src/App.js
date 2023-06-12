@@ -30,7 +30,9 @@ import Eventdetails from './Components/Page Component/EventDetails/Eventdetails'
 import Contacttop from './Components/Page Component/Contactpage/Contacttop';
 import Apply2 from './Components/Page Component/Admission/Apply2';
 import Eventadmission from './Components/Page Component/Admission/Eventadmission';
-
+import Simple from './Components/Page Component/Simple blog page/Simple';
+import ReplyForm from './Components/Page Component/Simple blog page/ReplyForm';
+import SecondDivided from './Components/Page Component/Simple blog page/SecondDivided';
 
 function App() {
   return (
@@ -53,7 +55,7 @@ function App() {
       {/* <Eventadmission/> */}
       {/* <Contacttop/> */}
       {/* <GetInTouch/> */}
-      <Howtospeak/>
+      {/* <Howtospeak/> */}
       {/* <SampleButtons/> */}
       {/* <Textsample/> */}
       {/* <Element/> */}
@@ -68,6 +70,9 @@ function App() {
       {/* <Blog/> */}
       {/* <GoogleImg/> */}
       {/* <Footermain/> */}
+      {/* <Simple/> */}
+      {/* <ReplyForm/> */}
+      <SecondDivided/>
     </div>
   )
 }
