@@ -20,6 +20,7 @@ module.exports = {
         facebook:'#3453C0',
         twit:'#CD2121',
         second:'#234762',
+        mcse:'#7D84AB'
         },
       fontSize:{
         xx:'13px',

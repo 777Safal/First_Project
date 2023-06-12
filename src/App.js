@@ -33,6 +33,7 @@ import Eventadmission from './Components/Page Component/Admission/Eventadmission
 import Simple from './Components/Page Component/Simple blog page/Simple';
 import ReplyForm from './Components/Page Component/Simple blog page/ReplyForm';
 import SecondDivided from './Components/Page Component/Simple blog page/SecondDivided';
+import Mcse from './Components/Page Component/Simple blog page/Mcse';
 
 function App() {
   return (
@@ -72,7 +73,8 @@ function App() {
       {/* <Footermain/> */}
       {/* <Simple/> */}
       {/* <ReplyForm/> */}
-      <SecondDivided/>
+      {/* <SecondDivided/> */}
+      <Mcse/>
     </div>
   )
 }
