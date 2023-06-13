@@ -35,6 +35,7 @@ import ReplyForm from './Components/Page Component/Simple blog page/ReplyForm';
 import SecondDivided from './Components/Page Component/Simple blog page/SecondDivided';
 import Mcse from './Components/Page Component/Simple blog page/Mcse';
 import Comment from './Components/Page Component/Simple blog page/Comment';
+import Table from './Components/Page Component/Elements/Table';
 
 function App() {
   return (
@@ -76,7 +77,8 @@ function App() {
       {/* <ReplyForm/> */}
       {/* <SecondDivided/> */}
       {/* <Mcse/> */}
-      <Comment/>
+      {/* <Comment/> */}
+      <Table/>
     </div>
   )
 }
