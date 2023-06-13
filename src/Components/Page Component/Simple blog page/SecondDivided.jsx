@@ -41,7 +41,7 @@ function SecondDivided() {
                  </div>
             </div>
             {/* Right part */}
-            <div className='w-2/6 h-screen pl-16'>
+            <div className='w-2/6 h-screen pl-16 bg-green-300'>
                 <div className='pr-8 mb-24'>
                     <div className='relative flex justify-center items-center mb-2'><input type='text' placeholder='Search keywords' className='w-full py-3 pl-2 font-poping text-lg outline-none border'/>
                     <div className='absolute  text-2xl font-normal text-gray-500  right-0 pr-2'><RiSearchLine/></div>
