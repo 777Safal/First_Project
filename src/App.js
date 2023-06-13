@@ -70,13 +70,13 @@ function App() {
       {/* <ImageGallery/> */}
       {/* <FormElement/> */}
       {/* <Blog/> */}
-      <GoogleImg/>
+      {/* <GoogleImg/> */}
       {/* <Footermain/> */}
       {/* <Simple/> */}
       {/* <ReplyForm/> */}
       {/* <SecondDivided/> */}
       {/* <Mcse/> */}
-      {/* <Comment/> */}
+      <Comment/>
     </div>
   )
 }

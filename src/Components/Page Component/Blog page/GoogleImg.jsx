@@ -114,8 +114,8 @@ function GoogleImg() {
                 </div>
                 {/* tag clouds */}
                 <div className='bg-gray-100  mt-16 py-3 pl-8'>
-                    <div className='mb-7 text-maincolor text-lg font-poping font-semibold tracking-wide'>Tag clouds</div>
-                    <div className='w-full flex flex-wrap'>
+                    <div className='mb-11 text-maincolor text-lg font-poping font-semibold tracking-wide'>Tag clouds</div>
+                    <div className='w-full mb-2 flex flex-wrap'>
                         {tag.map((val,i)=>{
                             return <div key={i}  className='px-4 py-2 bg-gray-300 mr-2 mb-2'>
                            {val.h1}     
@@ -140,7 +140,7 @@ function GoogleImg() {
                       </div>
                 </div>
                 {/* News letter */}
-                <div className='bg-gray-100  mt-16 py-3 '>
+                <div className='bg-gray-100  mt-16 pt-4 pb-8'>
                   <div className='mb-7 pl-8 text-maincolor text-lg font-poping font-semibold tracking-wide'>News Letter</div>
                   <div className='w-full px-4'>
                     <div className='relative flex justify-center items-center mb-2'><input type='text' placeholder='Enter email' className='w-full py-3 pl-2 font-poping text-lg outline-none border'/></div>
