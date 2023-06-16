@@ -36,14 +36,14 @@ function Table() {
         <div className='w-9/12 pr-80'>
               <div className='text-xl text-maincolor font-poping tracking-widest font-bold'>Table</div>
               <div className='bg-gray-100 px-2 py-3 font-poping text-base font-medium tracking-wide'>
-                <div className='flex grid  grid-cols-4 text-maincolor font-semibold'>
+                <div className='flex py-4 mb-2 grid border-b-4 grid-cols-4 text-maincolor font-semibold'>
                   {headings.map((val,i)=>{
                     return <div key={i} className=''>{val.h1}</div>
                   })}
-                </div>
+                </div> 
                 <div className=''>
                   {data.map((val,i)=>{
-                    return <div key={i} className= ' mt-7 flex items-center grid grid-cols-4'>
+                    return <div key={i} className= 'mb-7 flex items-center grid grid-cols-4'>
                       <div >{val.h1}</div>
                       <div className='flex items-center'>
                         <div  className='w-12 h-10 mr-2' style={{
