@@ -74,11 +74,11 @@ function App() {
       {/* <GoogleImg/> */}
       {/* <Footermain/> */}
       {/* <Simple/> */}
-      {/* <ReplyForm/> */}
+      <ReplyForm/>
       {/* <SecondDivided/> */}
       {/* <Mcse/> */}
       {/* <Comment/> */}
-      <Table/>
+      {/* <Table/> */}
     </div>
   )
 }
