@@ -36,6 +36,7 @@ import SecondDivided from './Components/Page Component/Simple blog page/SecondDi
 import Mcse from './Components/Page Component/Simple blog page/Mcse';
 import Comment from './Components/Page Component/Simple blog page/Comment';
 import Table from './Components/Page Component/Elements/Table';
+import Image from './Components/Page Component/Elements/Image';
 
 function App() {
   return (
@@ -74,11 +75,12 @@ function App() {
       {/* <GoogleImg/> */}
       {/* <Footermain/> */}
       {/* <Simple/> */}
-      <ReplyForm/>
+      {/* <ReplyForm/> */}
       {/* <SecondDivided/> */}
       {/* <Mcse/> */}
       {/* <Comment/> */}
       {/* <Table/> */}
+      <Image/>
     </div>
   )
 }
