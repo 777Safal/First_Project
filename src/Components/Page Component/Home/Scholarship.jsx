@@ -13,7 +13,7 @@ function Scholarship() {
 
   return (
     <div className='w-full flex items-center justify-center mt-4'>
-        <div className='w-9/12 flex items-center justify-between '>
+        <div className='w-9/12 flex items-center justify-between font-bbbb'>
             {schol.map((val,i)=>{
               return <div key={i} className={`${val.color} w-[314px] h-[82px] rounded-xl flex justify-center items-center text-2xl font-bbbb text-white font-medium`}>
                 <div className='flex items-center'>

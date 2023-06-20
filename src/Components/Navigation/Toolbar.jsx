@@ -20,11 +20,11 @@ function Toolbar() {
   return (
     <div className='w-full h-fit py-4 flex justify-center items-center'>
         <div className='w-9/12 flex items-center justify-between'>
-            <div className='flex text-2xl font-normal text-black'>
+            <div className='flex text-2xl font-normal text-black font-aaaa'>
               <div>{title[0].name}</div>
               <div className='ml-1 text-firstcolor'>{title[1].name}</div>
             </div>
-            <div className='flex'>
+            <div className='flex font-bbbb'>
               {
                 item.map((val,i)=>{
                   if((val.name==="Blog")||(val.name==="Page")){

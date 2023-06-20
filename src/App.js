@@ -43,7 +43,7 @@ function App() {
     <div className=''>
       {/* <Toolbar/> */}
        {/* <Scholarship/> */}
-       {/* <Popular/>  */}
+       <Popular/> 
       {/* <HomeImage/> */}
       {/* <Test/> */}
       {/* <Getstart/> */}
@@ -70,7 +70,7 @@ function App() {
       {/* <Defination/> */}
       {/* <BlockQuotes/> */}
       {/* <ImageGallery/> */}
-      <FormElement/>
+      {/* <FormElement/> */}
       {/* <Blog/> */}
       {/* <GoogleImg/> */}
       {/* <Footermain/> */}
