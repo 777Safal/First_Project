@@ -69,8 +69,8 @@ function App() {
       {/* <Aligned/> */}
       {/* <Defination/> */}
       {/* <BlockQuotes/> */}
-      <ImageGallery/>
-      {/* <FormElement/> */}
+      {/* <ImageGallery/> */}
+      <FormElement/>
       {/* <Blog/> */}
       {/* <GoogleImg/> */}
       {/* <Footermain/> */}

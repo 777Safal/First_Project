@@ -34,11 +34,17 @@ function FormElement() {
         {type:'text', placeholder:'Accent color', identiy:'accentcolor'},
     ]
  const data2=[
-    {num:'01',h1:'sample switch'},
-    {num:'02',h1:'Primary sample switch'},
-    {num:'03',h1:'Confirm sample switch'},
+    {h1:'01 sample switch'},
+    {h1:'02 Primary sample switch'},
+    {h1:'03 Confirm sample switch'},
  ]
  const formfield=[
+    {   label:'01. Sample radio',
+        type:"switch"},
+    {   label:'02. Primary Color radio',
+        type:"switch"},
+    {   label:'03. Confirm Color radio',
+        type:"switch"},
     {
         type:'select',
         options:[
@@ -125,10 +131,8 @@ function FormElement() {
             <div className='text-xl text-maincolor font-poping tracking-widest font-bold mb-7'>{headings[0].h2}</div>
             <div className=''>
                 {data2.map((val,i)=>{
-                    return <div key={i} className='flex text-prev text-base my-3'>
-                        <div>{val.num}</div>
-                        <div>{val.h1}</div>
-                        
+                    return <div key={i} className='flex text-prev text-base my-3 flex justify-between'>
+                        {val.h1}
                     </div>
                 })
                 }
@@ -159,9 +163,9 @@ function FormElement() {
             <div className='text-xl text-maincolor font-poping tracking-widest font-bold mb-7'>{headings[0].h4}</div>
             {formfield.map((val,i)=>{
                 if(val.type==='checkbox'){
-                    return <div key={i} className='text-prev text-base my-3'>
+                    return <div key={i} className='text-prev text-base my-3 flex justify-between'>
                         <label>{val.label}</label>
-                        <input type={val.type}/>
+                        <input type={val.type} className='  '/>
                     </div>
                 }
             })}
@@ -171,14 +175,25 @@ function FormElement() {
             <div className='text-xl text-maincolor font-poping tracking-widest font-bold mb-7'>{headings[0].h5}</div>
             {formfield.map((val,i)=>{
                 if(val.type==='radio'){
-                    return <div key={i} className='text-prev text-base my-3'>
+                    return <div key={i} className='text-prev text-base my-3 flex justify-between'>
                         <label>{val.label}</label>
                         <input type={val.type}/>
                     </div>
                 }
             })}
             </div>
+            <div>
+            {formfield.map((val,i)=>{
+                if (val.type==='switch'){
+                    return <div key={i}>
+                        <label>{val.label}</label>
+                        <input type={val.type}/>
+                    </div>
+                }
+            })}
             
+
+            </div>
         </div>
         </div>
     </div>
