@@ -14,7 +14,7 @@ function Image() {
   return (
     <div className='w-full flex justify-center'>
         <div className='w-9/12'>
-          <div className=''>
+          <div className='flex grid grid-cols-3 '>
             {img.map((val,i)=>{
               if((i<3)||(i>4)){
                 return <div key={i} className='w-64 h-36 ' style={{
@@ -22,14 +22,7 @@ function Image() {
                   backgroundsize:'cover',
                   backgroundPosition:'center'
                 }}></div>}
-              else {
-                return <div key={i} className='w-64 h-36 ' style={{
-                  backgroundImage:`url(${val.name})`,
-                  backgroundsize:'cover',
-                  backgroundPosition:'center'
-                }}>
-                </div>}
-              })
+              })  
             }
           </div>
         </div>
