@@ -70,7 +70,7 @@ function App() {
       {/* <Defination/> */}
       {/* <BlockQuotes/> */}
       {/* <ImageGallery/> */}
-      {/* <FormElement/> */}
+      <FormElement/>
       {/* <Blog/> */}
       {/* <GoogleImg/> */}
       {/* <Footermain/> */}
@@ -80,7 +80,7 @@ function App() {
       {/* <Mcse/> */}
       {/* <Comment/> */}
       {/* <Table/> */}
-      <Image/>
+      {/* <Image/> */}
     </div>
   )
 }

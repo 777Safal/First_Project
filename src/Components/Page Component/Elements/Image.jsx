@@ -14,14 +14,23 @@ function Image() {
   return (
     <div className='w-full flex justify-center'>
         <div className='w-9/12'>
-          <div className='flex grid grid-cols-3 '>
+          <div className='w-full flex  bg-red-400'>
             {img.map((val,i)=>{
               if((i<3)||(i>4)){
-                return <div key={i} className='w-64 h-36 ' style={{
+                return <div key={i} className='w-2/6 bg-white'>
+                  <div className='w-full h-36 bg-white ' style={{
                   backgroundImage:`url(${val.name})`,
                   backgroundsize:'cover',
                   backgroundPosition:'center'
-                }}></div>}
+                }}></div>
+                   </div>}
+                else{
+                  return <div key={i} className='w-2/4 h- 36' style={{
+                    backgroundImage:`url(${val.name})`,
+                    backgroundsize:'cover',
+                    backgroundPosition:'center'
+                  }}></div>
+                }
               })  
             }
           </div>
