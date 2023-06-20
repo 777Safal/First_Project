@@ -36,17 +36,17 @@ function ImageGallery() {
     ]
   return (
     <div className='flex justify-center'>
-        <div className='w-9/12 flex justify-between'>
+        <div className='w-9/12 flex justify-between font-poping'>
             {/* heading block */}
         <div>
             <div className='text-xl text-maincolor font-poping tracking-widest font-bold'>{data[0].h1}</div>
-            <div>
-                <div>{imggallery[0].h1}</div>
-                <div>{imggallery[0].h2}</div>
-                <div>{imggallery[0].h3}</div>
-                <div>{imggallery[0].h4}</div>
-                <div>{imggallery[0].h5}</div>
-                <div>{imggallery[0].h6}</div>
+            <div className='text-prev tracking-widest'>
+                <div className='text-2xl'>{imggallery[0].h1}</div>
+                <div className='text-xl'>{imggallery[0].h2}</div>
+                <div className='text-lg'>{imggallery[0].h3}</div>
+                <div className='text-base'>{imggallery[0].h4}</div>
+                <div className='text-sm'>{imggallery[0].h5}</div>
+                <div className='text-xs'>{imggallery[0].h6}</div>
             </div>
         </div>
         {/* unorderd list block */}
