@@ -19,7 +19,7 @@ const schema=yup.object().shape({
 })
 function FormElement() {
     const headings=[
-        {h1:'Form Element',h2:'Switch',h3:'Selectboxes',h4:'Checkboxes',h5:'Radios'}
+        {h1:'Form Element',h2:'Switch',h3:'Select boxes',h4:'Check boxes',h5:'Radios'}
     ]
     const data=[
         {type:'text', placeholder:'First Name', identiy:'firstName',},
@@ -66,6 +66,7 @@ function FormElement() {
   return (
     <div className='flex justify-center'>
         <div className='w-9/12 flex'>
+            {/* right side */}
             <div className='w-4/6'>
             <div className='text-xl text-maincolor font-poping tracking-widest font-bold mb-7'>{headings[0].h1}</div>
             <div className='font-poping text-base'> 
@@ -141,7 +142,7 @@ function FormElement() {
                     if(val.type==='select'){
                         return (
                             <div key={i}>
-                                <select> 
+                                <select className='bg-gray-200 text-black px-4 outline-none'> 
                                 {val.options.map((item,index)=>{
                                     return <option>{item.name}</option>
                                 })}
