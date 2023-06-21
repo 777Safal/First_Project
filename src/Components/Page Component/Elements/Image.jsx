@@ -1,6 +1,9 @@
 import React from 'react'
 
 function Image() {
+  const headings=[
+    {h1:'Image Gallery'}
+  ]
     const img=[
         {name:'https://images.unsplash.com/photo-1463438690606-f6778b8c1d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80'},
         {name:'https://images.unsplash.com/photo-1524293568345-75d62c3664f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=411&q=80'},
@@ -14,25 +17,43 @@ function Image() {
   return (
     <div className='w-full flex justify-center'>
         <div className='w-9/12'>
-          <div className='w-full flex  bg-red-400'>
-            {img.map((val,i)=>{
-              if((i<3)||(i>4)){
-                return <div key={i} className='w-2/6 bg-white'>
-                  <div className='w-full h-36 bg-white ' style={{
+        <div className='text-xl text-maincolor font-poping tracking-widest font-bold mb-7'>{headings[0].h1}</div>
+          <div className='w-full flex grid grid-rows-3 gap-10'>
+            <div className='grid grid-cols-3 gap-16'>
+              {img.map((val,i)=>{
+                if(i<3){
+                return <div key={i} className='w-full h-48' style={{
+                  backgroundImage:`url(${val.name})`,
+                  backgroundsize:'cover',
+                  backgroundPosition:'center'
+                }}>
+                </div>
+              }
+              })}
+            </div>
+            <div className='grid grid-cols-2 gap-16'>
+              {img.map((val,i)=>{
+                if((i===3)||(i===4)){
+                return <div key={i} className='w-full h-48' style={{
                   backgroundImage:`url(${val.name})`,
                   backgroundsize:'cover',
                   backgroundPosition:'center'
                 }}></div>
-                   </div>}
-                else{
-                  return <div key={i} className='w-2/4 h- 36' style={{
-                    backgroundImage:`url(${val.name})`,
-                    backgroundsize:'cover',
-                    backgroundPosition:'center'
-                  }}></div>
-                }
-              })  
-            }
+              }
+              })}
+            </div>
+            <div className='grid grid-cols-3 gap-16'>
+              {img.map((val,i)=>{
+                if(i>4){
+                return <div key={i} className='w-full h-48' style={{
+                  backgroundImage:`url(${val.name})`,
+                  backgroundsize:'cover',
+                  backgroundPosition:'center'
+                }}>
+                </div>
+              }
+              })}
+            </div>
           </div>
         </div>
     </div>

@@ -54,7 +54,9 @@ function Table() {
                         <div>{val.h2}</div>
                         </div>
                        <div>{val.num}</div> 
-                       <div className='flex items-center text-red-500'>{val.icon}</div> 
+                       <div>
+                        <div className='w-48 h-2  bg-red-500'></div>
+                        </div> 
                     </div>
                   })}
                 </div>

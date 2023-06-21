@@ -35,8 +35,8 @@ function Howtospeak() {
                     })}
                   </div>
                 </div>
-                <div className='w-[600px] h-[200px] mt-28 mb-10 bg-red-300 tracking-widest text-left font-bbbb font-medium'>{data[0].p}</div>
-                <div><button className='py-3 px-10 border border-hov'>{data[0].h2}</button></div>
+                <div className='w-[600px] h-[200px] mt-28 mb-10 tracking-widest text-left font-bbbb font-medium'>{data[0].p}</div>
+                <div><button className='mt-3 py-3 px-10 border border-hov hover:bg-hov hover:text-white'>{data[0].h2}</button></div>
             </div>
 
         </div>

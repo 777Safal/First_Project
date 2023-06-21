@@ -74,7 +74,7 @@ function App() {
 
       {/* <Eventdetails/> */}
       {/* <Howtospeak/> */}
-{/* yeshma baki xa  */}
+
 
       {/* <Apply2/> */}
       {/* <Eventadmission/> */}
@@ -88,7 +88,7 @@ function App() {
       {/* <Defination/> */}
       {/* <BlockQuotes/> */}
       {/* <Table/> */}
-      {/* <Image/> */}
+      <Image/>
       {/* <ImageGallery/> */}
 
       {/* <FormElement/> */}
