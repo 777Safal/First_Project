@@ -32,7 +32,7 @@ function Latestcourse() {
                         <div className='w-12 h-12 mb-6 rounded-full flex justify-center items-center bg-white text-2xl text-scholarship2'><MdOutlineScience/></div>
                         <div className='text-2xl mb-6 font-aaaa tracking-wider'>{val.h2}</div>
                         <div className='text-sm mb-6 font-bbbb font-normal'>{val.p2}</div>
-                        <div><button className='w-40 h-12 border border-hov rounded-lg text-hov'>Apply Now</button></div>
+                        <div><button className='w-40 h-12 border border-hov rounded-lg text-hov hover:text-white hover:bg-hov'>Apply Now</button></div>
                       </div>
                     })
                   }

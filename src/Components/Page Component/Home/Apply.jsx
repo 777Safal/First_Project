@@ -82,7 +82,7 @@ const applic=[
                             <label className='mb-16'>{applic[0].label}</label>
                             <Field type={applic[0].type} name={applic[0].identiy} className='border-b-2 bg-transparent outline-none'/>
                         </div>
-                        <div><button className='w-44 h-12 mt-20 text-hov font-semibold border-2 rounded-lg border-hov'>{apply[1].h2}</button></div>
+                        <div><button className='w-44 h-12 mt-20 text-hov font-semibold border-2 rounded-lg border-hov hover:bg-hov hover:text-white'>{apply[1].h2}</button></div>
                     </div>
                 </Form>
             }}

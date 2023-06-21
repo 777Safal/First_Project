@@ -16,7 +16,7 @@ function Textsample() {
     <div className='flex justify-center'>
         <div className='w-9/12 '>
             <div className='text-3xl text-maincolor font-poping mb-10'>{data[0].h1}</div>
-            <div className='text-lg font-bbbb tracking-widest'>{data[0].p}</div>
+            <div className='text-lg font-bbbb tracking-widest text-mcse'>{data[0].p}</div>
         </div>
     </div>
   )

@@ -24,7 +24,7 @@ function Aligned() {
                     <div className='w-4/5 pl-9 text-base tracking-wide font-poping font-normal text-gray-500'>{data[0].p}</div>
                 </div>
             </div>
-            <div className='w-full border-t-2 pt-10'>
+            <div className='w-full border-y-2 py-10'>
                 <div className='text-right text-xl text-maincolor font-poping tracking-widest font-bold mb-2'>{data[1].h1}</div>
                 <div className='w-full flex relative'>
                     <div className='w-1/5 h-44 absolute right-0'><img src={data[1].name} className='w-full h-full'/></div>

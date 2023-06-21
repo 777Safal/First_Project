@@ -13,11 +13,11 @@ const boost=[
         backgroundSize:'cover'
     }}>
         <div className='w-10/12 relative'>
-        <div className='w-[500px] absolute top-64 left-0'>
-            <div className='text-popular text-4xl font-aaaa font-normal tracking-widest'>{boost[0].name}</div>
-            <div className='flex mt-3 font-bbbb text-sm font-thin'>
-                <div><button className='border bg-white w-[218px] h-[58px]  hover:bg-hov'>{boost[0].name1}</button></div>
-                <div><button className='border w-[218px] h-[58px] ml-6 bg-white hover:bg-hov'>{boost[0].name2}</button></div>
+        <div className='w-[500px] absolute  top-64 left-0'>
+            <div className='text-popular text-4xl font-aaaa font-medium tracking-widest'>{boost[0].name}</div>
+            <div className='flex mt-4 font-bbbb text-lg font-medium'>
+                <div><button className='border bg-white w-[218px] h-[58px]  hover:bg-hov hover:text-white'>{boost[0].name1}</button></div>
+                <div><button className='border w-[218px] h-[58px] ml-6 bg-white hover:bg-hov  hover:text-white'>{boost[0].name2}</button></div>
             </div>
         </div>
         </div>

@@ -37,50 +37,76 @@ import Mcse from './Components/Page Component/Simple blog page/Mcse';
 import Comment from './Components/Page Component/Simple blog page/Comment';
 import Table from './Components/Page Component/Elements/Table';
 import Image from './Components/Page Component/Elements/Image';
+import Logintest from './Logintest';
 
 function App() {
   return (
     <div className=''>
+      {/* <Logintest/> */}
       {/* <Toolbar/> */}
-       {/* <Scholarship/> */}
-       <Popular/> 
-      {/* <HomeImage/> */}
-      {/* <Test/> */}
       {/* <Getstart/> */}
+       {/* <Scholarship/> */}
+       {/* <Popular/>  */}
+{/* yesh ma baki xa */}
+      {/* <HomeImage/> */}
       {/* <Latestcourse/> */}
       {/* <RecentEvent/> */}
       {/* <Apply/> */}
       {/* <News/> */}
       {/* <OurCourse/> */}
       {/* <Popular2/> */}
-      {/* <Contact/> */}
-      {/* <Apply/> */}
-      {/* <Apply2/> */}
-      {/* <Eventadmission/> */}
+{/* yesh ma baki xa */}
       {/* <Contacttop/> */}
+      {/* <Contact/> */}
       {/* <GetInTouch/> */}
-      {/* <Howtospeak/> */}
-      {/* <SampleButtons/> */}
-      {/* <Textsample/> */}
-      {/* <Element/> */}
-      {/* <Event/> */}
-      {/* <Eventtop/>  */}
-      {/* <Eventdetails/> */}
-      {/* <Aligned/> */}
-      {/* <Defination/> */}
-      {/* <BlockQuotes/> */}
-      {/* <ImageGallery/> */}
-      {/* <FormElement/> */}
+      {/* <Apply/> */}
       {/* <Blog/> */}
       {/* <GoogleImg/> */}
-      {/* <Footermain/> */}
+
       {/* <Simple/> */}
-      {/* <ReplyForm/> */}
       {/* <SecondDivided/> */}
       {/* <Mcse/> */}
       {/* <Comment/> */}
+      {/* <ReplyForm/> */}
+
+      {/* <Eventtop/>  */}
+      {/* <Event/> */}
+
+      {/* <Eventdetails/> */}
+      {/* <Howtospeak/> */}
+{/* yeshma baki xa  */}
+
+      {/* <Apply2/> */}
+      {/* <Eventadmission/> */}
+        
+      {/* <SampleButtons/> */}
+      
+      
+      {/* <Element/> */}
+      {/* <Textsample/> */}
+      {/* <Aligned/> */}
+      {/* <Defination/> */}
+      {/* <BlockQuotes/> */}
       {/* <Table/> */}
       {/* <Image/> */}
+      {/* <ImageGallery/> */}
+
+      {/* <FormElement/> */}
+      
+      
+      
+      
+      
+      
+      
+      {/* <Footermain/> */}
+      
+      
+      
+      
+      
+      
+      
     </div>
   )
 }
