@@ -16,6 +16,7 @@ module.exports = {
         primary:'#F56700',
         success:'#21E2E2',
         info:'#3266CB',
+        danger:'#CE2222',
         footer:'rgba(12, 18, 67, 0.8)',
         facebook:'#3453C0',
         twit:'#CD2121',

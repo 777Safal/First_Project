@@ -79,7 +79,7 @@ function App() {
       {/* <Apply2/> */}
       {/* <Eventadmission/> */}
         
-      {/* <SampleButtons/> */}
+      
       
       
       {/* <Element/> */}
@@ -88,16 +88,12 @@ function App() {
       {/* <Defination/> */}
       {/* <BlockQuotes/> */}
       {/* <Table/> */}
-      <Image/>
+      {/* <Image/> */}
       {/* <ImageGallery/> */}
 
+      <SampleButtons/>
+
       {/* <FormElement/> */}
-      
-      
-      
-      
-      
-      
       
       {/* <Footermain/> */}
       
