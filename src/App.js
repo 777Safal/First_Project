@@ -38,6 +38,7 @@ import Comment from './Components/Page Component/Simple blog page/Comment';
 import Table from './Components/Page Component/Elements/Table';
 import Image from './Components/Page Component/Elements/Image';
 import Logintest from './Logintest';
+import Switch from './Components/Page Component/Elements/Switch';
 
 function App() {
   return (
@@ -91,13 +92,13 @@ function App() {
       {/* <Image/> */}
       {/* <ImageGallery/> */}
 
-      <SampleButtons/>
+      {/* <SampleButtons/> */}
 
       {/* <FormElement/> */}
       
       {/* <Footermain/> */}
       
-      
+      <Switch/>
       
       
       
