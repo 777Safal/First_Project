@@ -5,6 +5,7 @@ import {BsPinFill} from 'react-icons/bs'
 import {GiCommercialAirplane} from 'react-icons/gi'
 import {FaGlobeAmericas} from 'react-icons/fa'
 import Switch from './Switch'
+import Radio from '../../Resources/Icons/Radio'
 
 const schema=yup.object().shape({
     firstName:yup.string().min(3,'Not sufficent').required('Enter First Name'),
@@ -179,7 +180,7 @@ function FormElement() {
                 if(val.type==='radio'){
                     return <div key={i} className='text-prev text-base my-3 flex justify-between'>
                         <label>{val.label}</label>
-                        <input type={val.type}/>
+                        <Radio/>
                     </div>
                 }
             })}

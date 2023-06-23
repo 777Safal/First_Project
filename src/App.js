@@ -39,6 +39,7 @@ import Table from './Components/Page Component/Elements/Table';
 import Image from './Components/Page Component/Elements/Image';
 import Logintest from './Logintest';
 import Switch from './Components/Page Component/Elements/Switch';
+import Radio from './Components/Resources/Icons/Radio';
 
 function App() {
   return (
@@ -95,6 +96,7 @@ function App() {
       {/* <SampleButtons/> */}
 
       <FormElement/>
+      {/* <Radio/> */}
       
       {/* <Footermain/> */}
       
