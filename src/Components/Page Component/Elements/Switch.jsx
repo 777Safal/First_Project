@@ -8,11 +8,9 @@ function Switch() {
     }
   return (
     <div>
-      <div onClick={afterClick} className={`${toggle? 'bg-primary':'bg-hov'} p-1 w-24 h-10 ml-5 mt-5 shadow-inner rounded-3xl`}> 
-      <div className='bg-white rounded-3xl relative w-full h-full outline-none'>
-      <button  className='w-full h-full bg-transparent outline-none'></button>
-      <div onClick={afterClick} className={`${toggle ? 'bg-primary absolute':'bg-hov absolute transform translate-x-12'} w-2/4 h-8 absolute top-0 left-0 right-0 bottom-0 shadow-inner rounded-3xl outline-none`}></div>
-      </div>
+      <div onClick={afterClick} className={`${toggle? 'bg-primary':'bg-hov'} w-12 p-1 h-6 relative outline-none rounded-3xl cursor-pointer`} >
+        <input type='checkbox' className='w-0 h-0 opacity-0 '/>
+        <span onClick={afterClick} className={`${toggle? 'absolute':'absolute transform translate-x-6'} w-4 m-1 bg-white absolute top-0 left-0 right-0 bottom-0 shadow-inner rounded-full outline-none`}></span>
       </div>
     </div>
   )

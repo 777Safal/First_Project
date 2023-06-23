@@ -94,11 +94,11 @@ function App() {
 
       {/* <SampleButtons/> */}
 
-      {/* <FormElement/> */}
+      <FormElement/>
       
       {/* <Footermain/> */}
       
-      <Switch/>
+      {/* <Switch/> */}
       
       
       

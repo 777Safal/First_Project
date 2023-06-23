@@ -4,6 +4,7 @@ import * as yup from 'yup'
 import {BsPinFill} from 'react-icons/bs'
 import {GiCommercialAirplane} from 'react-icons/gi'
 import {FaGlobeAmericas} from 'react-icons/fa'
+import Switch from './Switch'
 
 const schema=yup.object().shape({
     firstName:yup.string().min(3,'Not sufficent').required('Enter First Name'),
@@ -131,8 +132,9 @@ function FormElement() {
             <div className='text-xl text-maincolor font-poping tracking-widest font-bold mb-7'>{headings[0].h2}</div>
             <div className=''>
                 {data2.map((val,i)=>{
-                    return <div key={i} className='flex text-prev text-base my-3 flex justify-between'>
-                        {val.h1}
+                    return <div key={i} className='flex text-prev text-base my-3 flex justify-between items-center'>
+                        <div>{val.h1}</div>
+                        <Switch/>
                     </div>
                 })
                 }
@@ -181,18 +183,6 @@ function FormElement() {
                     </div>
                 }
             })}
-            </div>
-            <div>
-            {formfield.map((val,i)=>{
-                if (val.type==='switch'){
-                    return <div key={i}>
-                        <label>{val.label}</label>
-                        <input type={val.type}/>
-                    </div>
-                }
-            })}
-            
-
             </div>
         </div>
         </div>
