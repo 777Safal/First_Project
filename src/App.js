@@ -94,9 +94,9 @@ function App() {
       {/* <Image/> */}
       {/* <ImageGallery/> */}
 
-      {/* <SampleButtons/> */}
+      <SampleButtons/>
 
-      <FormElement/>
+      {/* <FormElement/> */}
       {/* <Radio/> */}
       {/* <Checkbox/> */}
       

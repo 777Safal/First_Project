@@ -1,4 +1,5 @@
 import React from 'react'
+import Radio from '../../Resources/Icons/Radio'
 
 function ImageGallery() {
     const data=[
@@ -53,10 +54,10 @@ function ImageGallery() {
         <div>
         <div className='text-xl mb-4 text-maincolor font-poping tracking-widest font-bold'>{data[0].h2}</div>
             <div>
-            <ul className='list-disc pl-5'>
+            <ul className='list-none pl-5'>
                 {unordered.map((val,i)=>{
                     return <li key={i} className='text-base font-normal mb-2'>
-                        {val.h1}
+                         {val.h1}
                     </li>
                 })}
             </ul>
