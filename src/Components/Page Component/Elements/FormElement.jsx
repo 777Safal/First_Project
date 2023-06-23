@@ -6,6 +6,7 @@ import {GiCommercialAirplane} from 'react-icons/gi'
 import {FaGlobeAmericas} from 'react-icons/fa'
 import Switch from './Switch'
 import Radio from '../../Resources/Icons/Radio'
+import Checkbox from '../../Resources/Icons/Checkbox'
 
 const schema=yup.object().shape({
     firstName:yup.string().min(3,'Not sufficent').required('Enter First Name'),
@@ -168,7 +169,7 @@ function FormElement() {
                 if(val.type==='checkbox'){
                     return <div key={i} className='text-prev text-base my-3 flex justify-between'>
                         <label>{val.label}</label>
-                        <input type={val.type} className='  '/>
+                        <Checkbox/>
                     </div>
                 }
             })}
