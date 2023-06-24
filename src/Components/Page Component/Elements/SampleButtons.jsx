@@ -64,44 +64,50 @@ function SampleButtons() {
       {h1:'Link',h2:'Disable'},
     ]
     const extralarze=[
-      [{h1:'Extra large',color:'bg-primary',textColor:'text-white',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm'},
-      {h1:'Large',color:'bg-primary',textColor:'text-white',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm'},
-      {h1:'Default',color:'bg-primary',textColor:'text-white',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm'},
-      {h1:'Medium',color:'bg-primary',textColor:'text-white',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm'},
-      {h1:'Small',color:'bg-primary',textColor:'text-white',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm'},]
+      [{h1:'Extra large',color:'bg-primary',textColor:'text-white',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm',textSize:'text-2xl',padding:'px-10 py-5'},
+      {h1:'Large',color:'bg-hov',textColor:'text-white',border:true,borderColor:'border-hov',borderRounded:'border rounded-sm', textSize:'text-xl',padding:'px-10 py-4'},
+      {h1:'Default',color:'bg-primary',textColor:'text-white',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm', textSize:'text-lg',padding:'px-10 py-3'},
+      {h1:'Medium',color:'bg-hov',textColor:'text-white',border:true,borderColor:'border-hov',borderRounded:'border rounded-sm', textSize:'text-md',padding:'px-8 py-2'},
+      {h1:'Small',color:'bg-primary',textColor:'text-white',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm', textSize:'text-sm',padding:'px-8 py-1'},],
+      
+      [{h1:'Extra large',color:'false',textColor:'text-primary',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm',textSize:'text-2xl',padding:'px-10 py-5'},
+      {h1:'Large',color:'false',textColor:'text-hov',border:true,borderColor:'border-hov',borderRounded:'border rounded-sm', textSize:'text-xl',padding:'px-10 py-4'},
+      {h1:'Default',color:'false',textColor:'text-primary',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm', textSize:'text-lg',padding:'px-10 py-3'},
+      {h1:'Medium',color:'false',textColor:'text-hov',border:true,borderColor:'border-hov',borderRounded:'border rounded-sm', textSize:'text-md',padding:'px-8 py-2'},
+      {h1:'Small',color:'false',textColor:'text-primary',border:true,borderColor:'border-primary',borderRounded:'border rounded-sm', textSize:'text-sm',padding:'px-8 py-1'},]
     ]
   return (
     <div className='w-full flex justify-center'>
-        <div className='w-9/12 flex justify-center font-bbbb text-base '>
+        <div className='w-9/12 flex justify-center font-bbbb  '>
         {/* left section */}
         <div className='w-2/3 '>
           <div className='grid grid-row-6 gap-3'>
         {data.map((row, i) => (
-          <div key={i} className="grid grid-cols-6 gap-5">
+          <div key={i} className="grid grid-cols-6 gap-3">
               {row.map((button, buttonI) => (
                 <div key={buttonI}
-                className={`${button.color?button.color:'bg-transparent'} ${button.border &&'border-2' } ${button?.borderColor} ${button.textColor} ${button.borderRounded} px-1 py-4 text-center rou`}>
+                className={`${button.color?button.color:'bg-transparent'} ${button.border &&'border-2' } ${button?.borderColor} ${button.textColor} ${button.borderRounded} px-1 py-3 text-center text-base tracking-widest1 `}>
                   <button> {button.h1}</button>
                 </div>
               ))}
           </div>
         ))}
           </div>
-          <div>
-              {extralarze.map((row,i)=>{
-                <div key={i} className="grid grid-cols-6 gap-5">
-                  {row.map((button,buttonI)=>{
+          <div className=' mt-5 grid grid-rows-2 gap-2'>
+              {extralarze.map((row,i)=>(
+                <div key={i} className="flex flex-row items-center">
+                  {row.map((button,buttonI)=>(
                     <div key={buttonI}
-                    className={`${button.color} ${button.textColor} ${button.border && 'border-2'} ${button.borderColor} ${button.color} ${button.borderRounded} px-1 py-4 text-center rou`}>
+                    className={`${button.color?button.color:'bg-transparent'} ${button.textColor} ${button.border && 'border-2'} ${button?.borderColor} ${button.color} ${button.borderRounded} ${button.textSize} ${button.padding} mr-5 text-center`}>
                       <button>{button.h1}</button>
                     </div>
-                  })}
+                  ))}
                 </div>
-              })}
+              ))}
           </div>
         </div>
         {/* right section */}
-        <div className='w-1/3 pl-10 '>
+        <div className='w-1/3 pl-10 text-base'>
                 <div className='w-56'>
                   {linkData.map((val,i)=>{
                     return <div key={i} className='flex mb-3 grid grid-cols-2 gap-5 text-center'>
