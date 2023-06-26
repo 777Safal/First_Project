@@ -41,6 +41,7 @@ import Logintest from './Logintest';
 import Switch from './Components/Page Component/Elements/Switch';
 import Radio from './Components/Resources/Icons/Radio';
 import Checkbox from './Components/Resources/Icons/Checkbox';
+import NewHooks from './Pages/NewHooks';
 
 function App() {
   return (
@@ -94,17 +95,17 @@ function App() {
       {/* <Image/> */}
       {/* <ImageGallery/> */}
 
-      <SampleButtons/>
-
+      {/* <SampleButtons/> */}
       {/* <FormElement/> */}
       {/* <Radio/> */}
       {/* <Checkbox/> */}
+
       
       {/* <Footermain/> */}
       
       {/* <Switch/> */}
       
-      
+      <NewHooks/>
       
       
       

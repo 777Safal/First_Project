@@ -78,44 +78,48 @@ function SampleButtons() {
     ]
   return (
     <div className='w-full flex justify-center'>
-        <div className='w-9/12 flex justify-center font-bbbb  '>
+        <div className='w-9/12  font-bbbb  '>
         {/* left section */}
-        <div className='w-2/3 '>
-          <div className='grid grid-row-6 gap-3'>
-        {data.map((row, i) => (
-          <div key={i} className="grid grid-cols-6 gap-3">
-              {row.map((button, buttonI) => (
-                <div key={buttonI}
-                className={`${button.color?button.color:'bg-transparent'} ${button.border &&'border-2' } ${button?.borderColor} ${button.textColor} ${button.borderRounded} px-1 py-3 text-center text-base tracking-widest1 `}>
-                  <button> {button.h1}</button>
-                </div>
-              ))}
-          </div>
-        ))}
-          </div>
-          <div className=' mt-5 grid grid-rows-2 gap-2'>
-              {extralarze.map((row,i)=>(
-                <div key={i} className="flex flex-row items-center">
-                  {row.map((button,buttonI)=>(
-                    <div key={buttonI}
-                    className={`${button.color?button.color:'bg-transparent'} ${button.textColor} ${button.border && 'border-2'} ${button?.borderColor} ${button.color} ${button.borderRounded} ${button.textSize} ${button.padding} mr-5 text-center`}>
-                      <button>{button.h1}</button>
-                    </div>
-                  ))}
-                </div>
-              ))}
-          </div>
+        <div className='text-xl text-maincolor font-poping tracking-widest font-bold mb-2'>Definition</div>
+        <div>
+        <div className='w-2/3 flex justify-center'>
+        
+        <div className='grid grid-row-6 gap-3'>
+      {data.map((row, i) => (
+        <div key={i} className="grid grid-cols-6 gap-3">
+            {row.map((button, buttonI) => (
+              <div key={buttonI}
+              className={`${button.color?button.color:'bg-transparent'} ${button.border &&'border-2' } ${button?.borderColor} ${button.textColor} ${button.borderRounded} px-1 py-3 text-center text-base tracking-widest1 `}>
+                <button> {button.h1}</button>
+              </div>
+            ))}
         </div>
-        {/* right section */}
-        <div className='w-1/3 pl-10 text-base'>
-                <div className='w-56'>
-                  {linkData.map((val,i)=>{
-                    return <div key={i} className='flex mb-3 grid grid-cols-2 gap-5 text-center'>
-                      <div className=' py-4 bg-gray-300'>{val.h1}</div>
-                      <div className=' py-4 bg-gray-300'>{val.h2}</div>
-                    </div>
-                  })}
-                </div>
+      ))}
+        </div>
+        <div className=' mt-5 grid grid-rows-2 gap-2'>
+            {extralarze.map((row,i)=>(
+              <div key={i} className="flex flex-row items-center">
+                {row.map((button,buttonI)=>(
+                  <div key={buttonI}
+                  className={`${button.color?button.color:'bg-transparent'} ${button.textColor} ${button.border && 'border-2'} ${button?.borderColor} ${button.color} ${button.borderRounded} ${button.textSize} ${button.padding} mr-5 text-center`}>
+                    <button>{button.h1}</button>
+                  </div>
+                ))}
+              </div>
+            ))}
+        </div>
+      </div>
+      {/* right section */}
+      <div className='w-1/3 pl-10 text-base'>
+              <div className='w-56'>
+                {linkData.map((val,i)=>{
+                  return <div key={i} className='flex mb-3 grid grid-cols-2 gap-5 text-center'>
+                    <div className=' py-4 bg-gray-300'>{val.h1}</div>
+                    <div className=' py-4 bg-gray-300'>{val.h2}</div>
+                  </div>
+                })}
+              </div>
+      </div>
         </div>
         </div>
     </div>
