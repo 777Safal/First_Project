@@ -42,6 +42,7 @@ import Switch from './Components/Page Component/Elements/Switch';
 import Radio from './Components/Resources/Icons/Radio';
 import Checkbox from './Components/Resources/Icons/Checkbox';
 import NewHooks from './Pages/NewHooks';
+import Login from './Components/Page Component/LoginForm/Login';
 
 function App() {
   return (
@@ -105,8 +106,9 @@ function App() {
       
       {/* <Switch/> */}
       
-      <NewHooks/>
+      {/* <NewHooks/> */}
       
+      <Login/>
       
       
     </div>
