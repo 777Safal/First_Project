@@ -24,100 +24,140 @@ const schema=yup.object().shape({
 })
 function Login() {
     const data=[
-        {   placeholder:'Category Name',
-            type:'text',
-            identiy:'Category_name'
-        },
-        {   placeholder:'Course',
-            type:'text',
-            identiy:'Course',
-        },
-        {   placeholder:'Date',
-            type:'date',
-            identiy:'Date'
-        },
-        {   placeholder:'Level of Education',
-            type:'text',
-            identiy:'Level_of_Education'
-        },
-        {   placeholder:'Shift',
-            type:'text',
-            identiy:'Shift'
-        },
-        {   placeholder:'Source of Information',
-            type:'text',
-            identiy:'Source_of_Information'
-        },
-        {   placeholder:'Stage',
-            type:'text',
-            identiy:'Stage'
-        },
-        {   placeholder:'Address',
-            type:'text',
-            identiy:'Address'
-        },
-        {   placeholder:'Contact no',
-            type:'text',
-            identiy:'Contact_no'
-        },
-        {   placeholder:'Created At',
-            type:'text',
-            identiy:'Created_At'
-        },
-        {   placeholder:'Discount',
-            type:'text',
-            identiy:'Discount'
-        },
-        {   placeholder:'Email',
-            type:'email',
-            identiy:'Email'
-        },
-        {   placeholder:'Guardian Name',
-            type:'text',
-            identiy:'Guardian_Name'
-        },
-        {   placeholder:'Guardian Number',
-            type:'text',
-            identiy:'Guardian_Number'
-        },
-        {   placeholder:'id',
-            type:'text',
-            identiy:'id'
-        },
-        {   placeholder:'image',
-            type:'text',
-            identiy:'image'
-        },
-        {   placeholder:'Name',
+        {   label:'Name',
             type:'text',
             identiy:'Name'
         },
-        {   placeholder:'Referal contact no',
-            type:'text',
-            identiy:'Referal_contact_no'
+        {   label:'Gender',
+            identiy:'Gender',
+            subdata: [
+                {
+                    label:'Male',
+                    type:'radio',
+                },
+                {
+                    label:'Female',
+                    type:'radio',
+                },
+                {
+                    label:'Others',
+                    type:'radio',
+                },]
         },
-        {   placeholder:'Refered by',
+        {   label:'Address',
             type:'text',
-            identiy:'Refered_by'
+            identiy:'Address'
         },
-        {   placeholder:'School Course Taken',
+        {   label:'Contact no',
             type:'text',
-            identiy:'School_Course_Taken'
+            identiy:'Contact_no'
         },
-        {   placeholder:'School Name',
+        {   label:'Guardian Name',
+            type:'text',
+            identiy:'Guardian_Name'
+        },
+        {   label:'Guardian Number',
+            type:'text',
+            identiy:'Guardian_Number'
+        },
+        {   label:'School Name',
             type:'text',
             identiy:'School_Name'
         },
-        {   placeholder:'Status',
+        {   label:'Category Name',
+            type:'text',
+            identiy:'Category_name'
+        },
+        {   label:'Course',
+            type:'select',
+            identiy:'Course',
+            options: [
+                {
+                    name:'Mern',
+                },
+                {
+                    name:'PHP',
+                },
+                {
+                    name:'MySQL',
+                },
+                {
+                    name:'JAVA',
+                },
+            ]
+        },
+        {   label:'Date',
+            type:'date',
+            identiy:'Date'
+        },
+        
+        {   label:'Level of Education',
+            type:'text',
+            identiy:'Level_of_Education'
+        },
+        {   label:'Shift',
+            type:'select',
+            identiy:'Shift',
+            options:[
+                {name:'Morning'},
+                {name:'Day'},
+                {name:'Evening'},
+            ]
+        },
+        {   label:'Source of Information',
+            type:'text',
+            identiy:'Source_of_Information'
+        },
+        {   label:'Stage',
+            type:'text',
+            identiy:'Stage'
+        },
+        
+        
+        {   label:'Created At',
+            type:'text',
+            identiy:'Created_At'
+        },
+        {   label:'Discount',
+            type:'text',
+            identiy:'Discount'
+        },
+        {   label:'Email',
+            type:'email',
+            identiy:'Email'
+        },
+        
+        {   label:'id',
+            type:'text',
+            identiy:'id'
+        },
+        {   label:'image',
+            type:'text',
+            identiy:'image'
+        },
+        {   label:'Referal contact no',
+            type:'text',
+            identiy:'Referal_contact_no'
+        },
+        {   label:'Refered by',
+            type:'text',
+            identiy:'Refered_by'
+        },
+        {   label:'School Course Taken',
+            type:'text',
+            identiy:'School_Course_Taken'
+        },
+    
+        {   label:'Status',
             type:'text',
             identiy:'Status'
         },
     ]
   return (
     <div className='w-full  flex bg-white justify-center items-center'>
-        <div className='w-8/12 mt-10 bg-gray-100 overflow-hidden  rounded-md'>
+        <div className='w-8/12 mt-10 overflow-hidden  rounded-md'>
         <Formik
-            ijnitalValues={{
+            initialValues={{
                 Category_name:'',
                 Course:'',
                 Date:'',
@@ -142,6 +182,7 @@ function Login() {
                 School_Name:'',
                 Status:'',
             }}
+                // validationSchema={schema}
                 validationSchema={schema}
                 onSubmit={(values)=>{
                     console.log(values)
@@ -149,13 +190,56 @@ function Login() {
             >
                 {({handleSubmit})=>{
                     return <Form onSubmit={handleSubmit}>
-                        <div className='grid grid-cols-2 gap-2 font-poping text-sm font-normal'>
-                            {data.map((val,i)=>{
-                                return <div key={i} className='mb-5 ' >
-                                    <Field type={val.type} name={val.identiy} placeholder={val.placeholder} 
-                                    className='w-full px-3 py-1 bg-gray-200 rounded-md outline-none text-gray-500'/>
-                                    <ErrorMessage name={val.identiy} component={'div'} className='text-red-500'/>
-                                </div>
+                        <div className='grid grid-cols-2 gap-2'>
+                            {data.map((val,i)=>{                          
+                                if (val.type==='select'){
+                                    return (
+                                        <div key={i} className='flex flex-col'>
+                                            <label className='text-base text-gray-500
+                                        font-bbbb font-medium'>{val.label}</label>
+                                            <select className='bg-gray-100 mt-1 px-1 py-2 w-1/4 rounded-md'>
+                                                {val.options.map((item,index)=>{
+                                                    return <option className='text-sm text-gray-500
+                                                    font-bbbb font-medium'>{item.name}</option>
+                                                })}
+                                            </select>
+                                        </div>
+                                    )
+                                }
+                                else {
+                                    if(val.subdata){
+                                        return <div key={i} className='flex flex-col text-base text-gray-500
+                                        font-bbbb font-medium'>
+                                            <label >{val.label}</label>
+                                            <div className='mt-3 pl-14 flex flex-row'>
+                                                {val.subdata && val.subdata.map((item,index)=>{
+                                                    return <div key={index} className='mr-3 '>
+                                                        <lable className='mr-1 text-sm text-gray-500
+                                             font-bbbb font-medium'>{item.label}</lable>
+                                                        <Field type={item.type} name={val.label} />
+                                                        
+                                                    </div>
+                                                })}
+                                            </div>
+                                            <ErrorMessage name={val.label} component={'div'}
+                                                        className='text-red-400 text-sm font-bbbb font-semibold'/>
+                                        </div>
+                                    }
+                                    else {
+                                        return <div key={i} className='flex flex-col mb-2 justify-center'>
+                                            <label className='text-base text-gray-500
+                                             font-bbbb font-medium mb-1'>
+                                                {val.label}
+                                            </label>
+                                            <Field type={val.type} name={val.identiy} 
+                                            className='bg-gray-100 text-gray-500
+                                            outline-none px-1 py-2 rounded-md'
+                                            />
+                                            <ErrorMessage name={val.identiy} component={'div'}
+                                            className='text-red-400 text-sm font-semibold'/>
+                                        </div>
+                                    }
+                                }
                             })}
                         </div>
                     </Form>
@@ -167,3 +251,4 @@ function Login() {
 }
 
 export default Login
+
