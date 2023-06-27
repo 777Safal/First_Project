@@ -26,8 +26,8 @@ function Logintest() {
     ]
     
       return (
-        <div className='bg-gradient-to-b from-yellow-100 to-white w-full h-screen flex justify-center items-center'>
-            <div className='bg-yellow-100 w-9/12 h-4/5 overflow-hidden rounded-lg shadow-2xl flex flex-row'>
+        <div className='bg-gradient-to-b from-yellow-200 to-white w-full h-screen flex justify-center items-center'>
+            <div className='w-9/12 h-4/5 overflow-hidden rounded-lg shadow-2xl flex flex-row'>
                 {/* Logins */}
                 <div className='bg-white w-2/5 h-full flex flex-col items-center shadow-2xl shadow-red-800'> 
     
@@ -56,7 +56,7 @@ function Logintest() {
                                         return <div key={i} className='flex flex-col'>
                                             {/* <label className='mt-4 text-base text-red-700  font-semibold'>{val.label}</label> */}
                                             <Field type={val.type} name={val.identiy} placeholder={val.placeholder} className='h-9 rounded-2xl bg-yellow-100 mt-4 placeholder:text-black p-4 text-sm outline-none'/>
-                                            <ErrorMessage name={val.identiy} component={'div'} className='text-sm text-yellow-300'/>
+                                            <ErrorMessage name={val.identiy} component={'div'} className='text-sm text-red-600 font-semibold'/>
                                         </div>
                                     })
                                 }
@@ -80,15 +80,8 @@ function Logintest() {
                     </div>    
                 </div>
                 {/* image */}
-                <div className='w-3/5 h-full'>
-                    <div className='bg-red-800'>
-                        <div className='bg-pink-900'>
-                            <div className='bg-transparent w-[683px] absolute'>
-                            <svg className='' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffd700" fill-opacity="0.2" d="M0,32L24,32C48,32,96,32,144,69.3C192,107,240,181,288,202.7C336,224,384,192,432,160C480,128,528,96,576,106.7C624,117,672,171,720,202.7C768,235,816,245,864,213.3C912,181,960,107,1008,90.7C1056,75,1104,117,1152,160C1200,203,1248,245,1296,256C1344,267,1392,245,1416,234.7L1440,224L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
-                            </div>
-                            <img src="https://img.freepik.com/premium-vector/football-soccer-splash-silhouette_9245-677.jpg?size=626&ext=jpg" className='w-full h-full'/>
-                        </div>
-                    </div>
+                <div className='w-3/5 h-full relative bg-center bg-cover bg-no-repeat bg-[url(https://img.freepik.com/premium-vector/football-soccer-splash-silhouette_9245-677.jpg?size=626&ext=jpg)]'>                      
+                    {/* <svg className='w-[614px] absolute top-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffd700" fill-opacity="0.2" d="M0,32L24,32C48,32,96,32,144,69.3C192,107,240,181,288,202.7C336,224,384,192,432,160C480,128,528,96,576,106.7C624,117,672,171,720,202.7C768,235,816,245,864,213.3C912,181,960,107,1008,90.7C1056,75,1104,117,1152,160C1200,203,1248,245,1296,256C1344,267,1392,245,1416,234.7L1440,224L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg> */}
                 </div>
             </div>
         </div>
@@ -97,3 +90,4 @@ function Logintest() {
     
 
 export default Logintest
+

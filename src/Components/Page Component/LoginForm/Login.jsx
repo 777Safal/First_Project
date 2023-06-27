@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Form,Formik,ErrorMessage,Field} from 'formik'
 import * as yup from 'yup'
+import View from './View'
 
 const schema=yup.object().shape({
     Category_name:yup.string().min(3,'Not sufficent').required('Category Name is required'),
@@ -23,6 +24,8 @@ const schema=yup.object().shape({
     Status:yup.string().required('Status is required'),
 })
 function Login() {
+    const [action,setaction] =useState('add')
+
     const data=[
         {   label:'Name',
             type:'text',
@@ -154,8 +157,9 @@ function Login() {
         },
     ]
   return (
-    <div className='w-full  flex bg-white justify-center items-center'>
-        <div className='w-8/12 mt-10 overflow-hidden  rounded-md'>
+    <div className='w-full pb-10 flex bg-white justify-center items-center'>
+     {
+        action==='view'?<View />:   <div className='w-8/12 mt-10 overflow-hidden  rounded-md'>
         <Formik
             initialValues={{
                 Category_name:'',
@@ -197,7 +201,7 @@ function Login() {
                                         <div key={i} className='flex flex-col'>
                                             <label className='text-base text-gray-500
                                         font-bbbb font-medium'>{val.label}</label>
-                                            <select className='bg-gray-100 mt-1 px-1 py-2 w-1/4 rounded-md'>
+                                            <select className='bg-gray-100 mt-1 px-1 py-2 w-full rounded-md'>
                                                 {val.options.map((item,index)=>{
                                                     return <option className='text-sm text-gray-500
                                                     font-bbbb font-medium'>{item.name}</option>
@@ -242,10 +246,18 @@ function Login() {
                                 }
                             })}
                         </div>
+                        <div><button 
+                        className='mt-5 w-60 h-16 text-base font-bbbb font-semibold tracking-widest text-hov border-2 border-hov rounded-md hover:text-white hover:bg-hov'
+                        >Submit</button></div>
+                        <div className='flex justify-between my-10'>
+                            <div><button onClick={()=>setaction('add')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md' >Add</button></div>
+                            <div><button onClick={()=>setaction('view')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md'>View</button></div>
+                        </div>
                     </Form>
                 }}
             </Formik>
         </div>
+     }
     </div>
   )
 }

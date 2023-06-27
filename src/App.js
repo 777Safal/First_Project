@@ -43,11 +43,12 @@ import Radio from './Components/Resources/Icons/Radio';
 import Checkbox from './Components/Resources/Icons/Checkbox';
 import NewHooks from './Pages/NewHooks';
 import Login from './Components/Page Component/LoginForm/Login';
+import View from './Components/Page Component/LoginForm/View';
 
 function App() {
   return (
     <div className=''>
-      {/* <Logintest/> */}
+      
       {/* <Toolbar/> */}
       {/* <Getstart/> */}
        {/* <Scholarship/> */}
@@ -107,10 +108,14 @@ function App() {
       {/* <Switch/> */}
       
       {/* <NewHooks/> */}
+      {/* <View/> */}
+      {/* <Login/> */}
       
-      <Login/>
       
-      
+{/* clz */}
+    <Logintest/>
+
+
     </div>
   )
 }
