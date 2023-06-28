@@ -44,6 +44,7 @@ import Checkbox from './Components/Resources/Icons/Checkbox';
 import NewHooks from './Pages/NewHooks';
 import Login from './Components/Page Component/LoginForm/Login';
 import View from './Components/Page Component/LoginForm/View';
+import Navbarclz from './Navbarclz';
 
 function App() {
   return (
@@ -113,7 +114,8 @@ function App() {
       
       
 {/* clz */}
-    <Logintest/>
+    {/* <Logintest/> */}
+    <Navbarclz/>
 
 
     </div>
