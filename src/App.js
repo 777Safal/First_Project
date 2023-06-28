@@ -42,9 +42,12 @@ import Switch from './Components/Page Component/Elements/Switch';
 import Radio from './Components/Resources/Icons/Radio';
 import Checkbox from './Components/Resources/Icons/Checkbox';
 import NewHooks from './Pages/NewHooks';
-import Login from './Components/Page Component/LoginForm/Login';
+import Login from './Components/Page Component/LoginForm/Index';
 import View from './Components/Page Component/LoginForm/View';
-import Navbarclz from './Navbarclz';
+import Navbar from './CLZ/NAv/Navbar';
+import Home from './CLZ/Home/Home';
+import Book from './CLZ/Home/Book';
+import Contactus from './CLZ/Contact/Contactus';
 
 function App() {
   return (
@@ -110,13 +113,15 @@ function App() {
       
       {/* <NewHooks/> */}
       {/* <View/> */}
-      {/* <Login/> */}
+      <Login/>
       
       
 {/* clz */}
     {/* <Logintest/> */}
-    <Navbarclz/>
-
+    {/* <Navbar/>
+    <Home/>
+    <Book/>
+    <Contactus/> */}
 
     </div>
   )

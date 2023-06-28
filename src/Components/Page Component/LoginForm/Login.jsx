@@ -24,7 +24,7 @@ const schema=yup.object().shape({
     Status:yup.string().required('Status is required'),
 })
 function Login() {
-    const [action,setaction] =useState('add')
+   
 
     const data=[
         {   label:'Name',
@@ -158,8 +158,7 @@ function Login() {
     ]
   return (
     <div className='w-full pb-10 flex bg-white justify-center items-center'>
-     {
-        action==='view'?<View />:   <div className='w-8/12 mt-10 overflow-hidden  rounded-md'>
+     <div className='w-8/12 mt-10 overflow-hidden  rounded-md'>
         <Formik
             initialValues={{
                 Category_name:'',
@@ -249,15 +248,14 @@ function Login() {
                         <div><button 
                         className='mt-5 w-60 h-16 text-base font-bbbb font-semibold tracking-widest text-hov border-2 border-hov rounded-md hover:text-white hover:bg-hov'
                         >Submit</button></div>
-                        <div className='flex justify-between my-10'>
+                        {/* <div className='flex justify-between my-10'>
                             <div><button onClick={()=>setaction('add')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md' >Add</button></div>
                             <div><button onClick={()=>setaction('view')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md'>View</button></div>
-                        </div>
+                        </div> */}
                     </Form>
                 }}
             </Formik>
         </div>
-     }
     </div>
   )
 }
