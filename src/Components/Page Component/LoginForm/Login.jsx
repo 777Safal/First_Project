@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import {Form,Formik,ErrorMessage,Field} from 'formik'
 import * as yup from 'yup'
 import View from './View'
+import axios from 'axios'
 
 const schema=yup.object().shape({
     Category_name:yup.string().min(3,'Not sufficent').required('Category Name is required'),
@@ -29,7 +30,7 @@ function Login() {
     const data=[
         {   label:'Name',
             type:'text',
-            identiy:'Name'
+            identiy:'name'
         },
         {   label:'Gender',
             identiy:'Gender',
@@ -49,23 +50,23 @@ function Login() {
         },
         {   label:'Address',
             type:'text',
-            identiy:'Address'
+            identiy:'address'
         },
         {   label:'Contact no',
             type:'text',
-            identiy:'Contact_no'
+            identiy:'contact_no'
         },
         {   label:'Guardian Name',
             type:'text',
-            identiy:'Guardian_Name'
+            identiy:'guardian_Name'
         },
         {   label:'Guardian Number',
             type:'text',
-            identiy:'Guardian_Number'
+            identiy:'guardian_Number'
         },
         {   label:'School Name',
             type:'text',
-            identiy:'School_Name'
+            identiy:'school_Name'
         },
         {   label:'Category Name',
             type:'text',
@@ -109,25 +110,23 @@ function Login() {
         },
         {   label:'Source of Information',
             type:'text',
-            identiy:'Source_of_Information'
+            identiy:'SourceofInformation'
         },
         {   label:'Stage',
             type:'text',
             identiy:'Stage'
         },
-        
-        
         {   label:'Created At',
             type:'text',
             identiy:'Created_At'
         },
         {   label:'Discount',
             type:'text',
-            identiy:'Discount'
+            identiy:'discount'
         },
         {   label:'Email',
             type:'email',
-            identiy:'Email'
+            identiy:'email'
         },
         
         {   label:'id',
@@ -140,20 +139,20 @@ function Login() {
         },
         {   label:'Referal contact no',
             type:'text',
-            identiy:'Referal_contact_no'
+            identiy:'referal_contact_no'
         },
         {   label:'Refered by',
             type:'text',
-            identiy:'Refered_by'
+            identiy:'refered_by'
         },
         {   label:'School Course Taken',
             type:'text',
-            identiy:'School_Course_Taken'
+            identiy:'schoolCourseTaken'
         },
     
         {   label:'Status',
             type:'text',
-            identiy:'Status'
+            identiy:'status'
         },
     ]
   return (
@@ -167,31 +166,38 @@ function Login() {
                 Gender:'',
                 Level_of_Education:'',
                 Shift:'',
-                Source_of_Information:'',
+                SourceofInformation:'',
                 Stage:'',
-                Address:'',
-                Contact_no:'',
+                address:'',
+                contact_no:'',
                 Created_At:'',
-                Discount:'',
-                Email:'',
-                Guardian_Name:'',
-                Guardian_Number:'',
+                discount:'',
+                email:'',
+                guardian_Name:'',
+                guardian_Number:'',
                 id:'',
                 image:'',
-                Name:'',
-                Referal_contact_no:'',
-                Refered_by:'',
-                School_Course_Taken:'',
-                School_Name:'',
-                Status:'',
+                name:'',
+                referal_contact_no:'',
+                refered_by:'',
+                choolCourseTaken:'',
+                schoolName:'',
+                status:'',
             }}
                 // validationSchema={schema}
-                validationSchema={schema}
+                // validationSchema={schema}
                 onSubmit={(values)=>{
                     console.log(values)
+                    try {
+                        axios.post('http://192.168.1.147:4003/studentinfo',values).then(res=>{console.log(res)}).catch(err=>{console.log(err)
+
+                        })
+                    } catch (error){
+                        console.log(error)
+                    }
                 }}
             >
-                {({handleSubmit})=>{
+                {({handleSubmit,setFieldValue})=>{
                     return <Form onSubmit={handleSubmit}>
                         <div className='grid grid-cols-2 gap-2'>
                             {data.map((val,i)=>{                          
@@ -200,12 +206,12 @@ function Login() {
                                         <div key={i} className='flex flex-col'>
                                             <label className='text-base text-gray-500
                                         font-bbbb font-medium'>{val.label}</label>
-                                            <select className='bg-gray-100 mt-1 px-1 py-2 w-full rounded-md'>
+                                            <Field as={'select'} className='bg-gray-100 mt-1 px-1 py-2 w-full rounded-md'>
                                                 {val.options.map((item,index)=>{
                                                     return <option className='text-sm text-gray-500
                                                     font-bbbb font-medium'>{item.name}</option>
                                                 })}
-                                            </select>
+                                            </Field>
                                         </div>
                                     )
                                 }
@@ -219,7 +225,9 @@ function Login() {
                                                     return <div key={index} className='mr-3 '>
                                                         <lable className='mr-1 text-sm text-gray-500
                                              font-bbbb font-medium'>{item.label}</lable>
-                                                        <Field type={item.type} name={val.label} />
+                                                        <input onChange={(e)=>{
+                                                            setFieldValue('Gender',e.target.value)
+                                                        }} type={item.type} name={val.label} />
                                                         
                                                     </div>
                                                 })}
@@ -245,7 +253,8 @@ function Login() {
                                 }
                             })}
                         </div>
-                        <div><button 
+                        <div><button
+                        type='submit' 
                         className='mt-5 w-60 h-16 text-base font-bbbb font-semibold tracking-widest text-hov border-2 border-hov rounded-md hover:text-white hover:bg-hov'
                         >Submit</button></div>
                         {/* <div className='flex justify-between my-10'>
