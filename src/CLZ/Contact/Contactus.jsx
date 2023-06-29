@@ -3,18 +3,45 @@ import {VscLocation} from 'react-icons/vsc'
 import {FiPhoneCall} from 'react-icons/fi'
 import {TbMail} from 'react-icons/tb'
 import {Form,Formik,ErrorMessage,Field} from 'formik'
+import * as yup from 'yup'
+import { MdTextFields } from 'react-icons/md'
 
+const schema=yup.object().shape({
+  name:yup.string().min(3,'Not sufficent').required('Name is required'),
+  email:yup.string().required('Name is required'),
+  subject:yup.string().required('Name is required'),
+  message:yup.string().required('Name is required'),
+})
 
 function Contactus() {
     const heading=[
         {h1:'CONTACT US'},
         {h1:'Contact Info'},
         {h1:'Get in touch'},
+        {h1:'Send Message'},
     ]
     const contact=[
       {h1:'Location',h2:'32907 Tilottama ,Rupandehi',h3:'Janakinagar, Aslami Path',icon:<VscLocation/>},
       {h1:'Subscriptions',h2:'+977 9800000000',h3:'+977 9808765432',icon:<FiPhoneCall/>},
       {h1:'E-mail',h2:'monalisa@gmail.com',h3:'www.mfutsal.com',icon:<TbMail/>},
+    ]
+    const data=[
+      {placeholder:'Your name',
+        type:'text',
+        identiy:'name',
+      },
+      {placeholder:'Your e-mail',
+        type:'email',
+        identiy:'email',
+      },
+      {placeholder:'Subject',
+        type:'text',
+        identiy:'subject',
+      },
+      {placeholder:'Message',
+        type:'text',
+        identiy:'message',
+      },
     ]
   return (
     <div className='w-full'>
@@ -25,7 +52,7 @@ function Contactus() {
         </div>
         <div className='w-full flex mb-10 justify-center font-bbbb tracking-wider'>
           <div className='w-10/12 bg-white flex'> 
-            <div className='w-2/6 py-2 pl-5 mr-10 rounded-md bg-yellow-300'>
+            <div className='w-2/6 py-3 pl-5 mr-10 rounded-md bg-yellow-300'>
               <div className=' text-3xl font-bold text-slate-700'>{heading[1].h1}</div>
                 <div>
                   {contact.map((val,i)=>{
@@ -43,8 +70,59 @@ function Contactus() {
                 </div>
             </div>
             {/* form section */}
-            <div className='w-4/6 rounded-md bg-yellow-300'>
-                  
+            <div className='w-4/6 px-5 py-3 rounded-md bg-yellow-300'>
+              <div className=' text-3xl mb-8 font-bold text-slate-700'>{heading[2].h1}</div>
+                  <Formik 
+                  initialValues={{
+                    name:'',
+                    email:'',
+                    subject:'',
+                    message:'',
+                  }}
+                  validationSchema={schema}
+                  onSubmit={(values)=>{
+                    console.log(values)
+                  }}
+                  >
+                    {({handleSubmit})=>{
+                      return <Form onSubmit={handleSubmit}>
+                        <div className='flex flex-wrap'>
+                          {data.map((val,i)=>{
+                            if(val.identiy==='subject'){
+                              return <div key={i} className='w-full mb-2 pl-2'>
+                                <Field type={val.type} name={val.identiy} 
+                                placeholder={val.placeholder} 
+                                className='w-full px-2 py-2 bg-white text-gray-500
+                                rounded-lg outline-none'/>
+                                <ErrorMessage name={val.identiy} component={'div'}
+                                className='text-red-600'/>
+                              </div>
+                            }
+                            else if(val.identiy==='message'){
+                              return <div key={i} className='w-full pl-2'>
+                                <textarea type={val.type} name={val.identiy} 
+                                placeholder={val.placeholder} 
+                                className='w-full h-32 rounded-md bg-white 
+                                px-2 pt-2 text-gray-500 outline-none '/>
+                                <ErrorMessage name={val.identiy} component={'div'} 
+                                className='text-red-600'/>
+                              </div>
+                            }
+                            else {
+                              return <div key={i} className='w-2/4 mb-2 pl-2'>
+                                <Field type={val.type} placeholder={val.placeholder}
+                                name={val.identiy}  className='w-full p-2 bg-white text-gray-500
+                                rounded-md outline-none'/>
+                              </div>
+                            }
+                          })}
+                        </div>
+                        <div><button type='submit' 
+                        className='w-40 h-12 ml-2 mt-10 text-center text-base font-medium font-poping rounded-md bg-red-600 
+                        text-white hover:bg-white hover:text-red-600 border-2 border-red-600 '>{heading[3].h1}</button></div>
+                      </Form>
+                    }}
+                  </Formik>
             </div>
           </div>
         </div>

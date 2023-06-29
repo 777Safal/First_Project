@@ -121,7 +121,7 @@ function App() {
     {/* <Logintest/> */}
    <Navbar/> 
     <Home/>
-    <Book/>
+    {/* <Book/> */}
     
     <TicketBook/>
     <Contactus/>  
