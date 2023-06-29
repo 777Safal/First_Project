@@ -49,6 +49,7 @@ import Home from './CLZ/Home/Home';
 import Book from './CLZ/Home/Book';
 import Contactus from './CLZ/Contact/Contactus';
 import TicketBook from './CLZ/Book/TicketBook';
+import Map from './CLZ/Contact/Map';
 
 function App() {
   return (
@@ -125,6 +126,7 @@ function App() {
     
     <TicketBook/>
     <Contactus/>  
+    <Map/>
     </div>
   )
 }
