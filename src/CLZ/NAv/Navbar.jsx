@@ -9,7 +9,7 @@ function Navbar() {
         {h1:'CONTACT US'},
     ]
   return (
-    <div className='w-full h-16 mb-10 flex items-center justify-center bg-yellow-200'>
+    <div className='w-full h-16  flex items-center justify-center bg-yellow-200'>
         <div className='w-10/12 flex items-center justify-between text-sm font-bbbb font-normal'>
             <div className='flex items-center'>
                 <div 

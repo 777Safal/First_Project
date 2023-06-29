@@ -48,6 +48,7 @@ import Navbar from './CLZ/NAv/Navbar';
 import Home from './CLZ/Home/Home';
 import Book from './CLZ/Home/Book';
 import Contactus from './CLZ/Contact/Contactus';
+import TicketBook from './CLZ/Book/TicketBook';
 
 function App() {
   return (
@@ -113,16 +114,17 @@ function App() {
       
       {/* <NewHooks/> */}
       {/* <View/> */}
-      <Login/>
+      {/* <Login/> */}
       
       
 {/* clz */}
     {/* <Logintest/> */}
-    {/* <Navbar/>
+   <Navbar/> 
     <Home/>
     <Book/>
-    <Contactus/> */}
-
+    
+    <TicketBook/>
+    <Contactus/>  
     </div>
   )
 }
