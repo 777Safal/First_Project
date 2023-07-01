@@ -53,7 +53,7 @@ function Logintest() {
                             return <Form onSubmit={handleSubmit}>
                                 {
                                     fieldsData.map((val,i)=>{
-                                        return <div key={i} className='flex flex-col'>
+                                        return <div key={i} className='h-16 flex flex-col'>
                                             {/* <label className='mt-4 text-base text-red-700  font-semibold'>{val.label}</label> */}
                                             <Field type={val.type} name={val.identiy} placeholder={val.placeholder} className='h-9 rounded-2xl bg-yellow-100 mt-4 placeholder:text-black p-4 text-sm outline-none'/>
                                             <ErrorMessage name={val.identiy} component={'div'} className='text-sm text-red-600 font-semibold'/>

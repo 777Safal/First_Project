@@ -8,9 +8,9 @@ import { MdTextFields } from 'react-icons/md'
 
 const schema=yup.object().shape({
   name:yup.string().min(3,'Not sufficent').required('Name is required'),
-  email:yup.string().required('Name is required'),
-  subject:yup.string().required('Name is required'),
-  message:yup.string().required('Name is required'),
+  email:yup.string().required('email id  is required'),
+  subject:yup.string().required('Subject is required'),
+  message:yup.string().required('Message is required'),
 })
 
 function Contactus() {
@@ -26,11 +26,11 @@ function Contactus() {
       {h1:'E-mail',h2:'monalisa@gmail.com',h3:'www.mfutsal.com',icon:<TbMail/>},
     ]
     const data=[
-      {placeholder:'Your name',
+      {placeholder:'Name',
         type:'text',
         identiy:'name',
       },
-      {placeholder:'Your e-mail',
+      {placeholder:'E-mail',
         type:'email',
         identiy:'email',
       },
@@ -50,8 +50,8 @@ function Contactus() {
           <div className='w-60 h-12 mt-5 text-center text-4xl font-bbbb tracking-wider 
           font-semibold border-b-4 border-red-600 text-red-600'>{heading[0].h1}</div>
         </div>
-        <div className='w-full flex mb-10 justify-center font-bbbb tracking-wider'>
-          <div className='w-10/12 bg-white flex'> 
+        <div className='w-full flex mb-10  justify-center font-bbbb tracking-wider'>
+          <div className='w-10/12 bg-transparent rounded-md overflow-hidden relative flex'> 
             <div className='w-2/6 py-3 pl-5 mr-10 rounded-md bg-yellow-300'>
               <div className=' text-3xl font-bold text-slate-700'>{heading[1].h1}</div>
                 <div>
@@ -89,36 +89,38 @@ function Contactus() {
                         <div className='flex flex-wrap'>
                           {data.map((val,i)=>{
                             if(val.identiy==='subject'){
-                              return <div key={i} className='w-full mb-2 pl-2'>
+                              return <div key={i} className='w-full h-16 pl-2'>
                                 <Field type={val.type} name={val.identiy} 
                                 placeholder={val.placeholder} 
-                                className='w-full px-2 py-2 bg-white text-gray-500
+                                className='w-full px-2 py-1 bg-white text-gray-500
                                 rounded-lg outline-none'/>
                                 <ErrorMessage name={val.identiy} component={'div'}
-                                className='text-red-600'/>
+                                className='text-sm text-red-600'/>
                               </div>
                             }
                             else if(val.identiy==='message'){
-                              return <div key={i} className='w-full pl-2'>
+                              return <div key={i} className='w-full  h-24 pl-2'>
                                 <textarea type={val.type} name={val.identiy} 
                                 placeholder={val.placeholder} 
-                                className='w-full h-32 rounded-md bg-white 
-                                px-2 pt-2 text-gray-500 outline-none '/>
+                                className='w-full h-full rounded-md bg-white 
+                                px-2 pt-1 text-gray-500 outline-none '/>
                                 <ErrorMessage name={val.identiy} component={'div'} 
-                                className='text-red-600'/>
+                                className='text-sm text-red-600'/>
                               </div>
                             }
                             else {
-                              return <div key={i} className='w-2/4 mb-2 pl-2'>
+                              return <div key={i} className='w-2/4  h-16  pl-2'>
                                 <Field type={val.type} placeholder={val.placeholder}
                                 name={val.identiy}  className='w-full p-2 bg-white text-gray-500
                                 rounded-md outline-none'/>
+                                <ErrorMessage name={val.identiy} component={'div'} 
+                                className='text-sm text-red-600'/>
                               </div>
                             }
                           })}
                         </div>
                         <div><button type='submit' 
-                        className='w-40 h-12 ml-2 mt-10 text-center text-base font-medium font-poping rounded-md bg-red-600 
+                        className='w-40 h-12 ml-2 mt-20 text-center text-base font-medium font-poping rounded-md bg-red-600 
                         text-white hover:bg-white hover:text-red-600 border-2 border-red-600 '>{heading[3].h1}</button></div>
                       </Form>
                     }}

@@ -37,7 +37,7 @@ import Mcse from './Components/Page Component/Simple blog page/Mcse';
 import Comment from './Components/Page Component/Simple blog page/Comment';
 import Table from './Components/Page Component/Elements/Table';
 import Image from './Components/Page Component/Elements/Image';
-import Logintest from './Logintest';
+import Logintest from './CLZ/Login/Logintest';
 import Switch from './Components/Page Component/Elements/Switch';
 import Radio from './Components/Resources/Icons/Radio';
 import Checkbox from './Components/Resources/Icons/Checkbox';
@@ -119,14 +119,16 @@ function App() {
       
       
 {/* clz */}
-    {/* <Logintest/> */}
-   <Navbar/> 
+    <Logintest/>
+
+    <Navbar/> 
     <Home/>
-    {/* <Book/> */}
-    
+        
     <TicketBook/>
     <Contactus/>  
-    <Map/>
+    <Map/> 
+    {/* <Book/> */}
+    {/* <Aboutus> */}
     </div>
   )
 }
