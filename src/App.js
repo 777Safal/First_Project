@@ -51,6 +51,7 @@ import Contactus from './CLZ/Contact/Contactus';
 import TicketBook from './CLZ/Book/TicketBook';
 import Map from './CLZ/Contact/Map';
 import About from './CLZ/About us/About';
+import Signin from './CLZ/Login/Signin';
 
 function App() {
   return (
@@ -120,6 +121,7 @@ function App() {
       
       
 {/* clz */}
+    <Signin/>
     <Logintest/>
 
     <Navbar/> 
