@@ -52,6 +52,7 @@ import TicketBook from './CLZ/Book/TicketBook';
 import Map from './CLZ/Contact/Map';
 import About from './CLZ/About us/About';
 import Signin from './CLZ/Login/Signin';
+import Heading from './CLZ/News/Heading';
 
 function App() {
   return (
@@ -122,16 +123,17 @@ function App() {
       
 {/* clz */}
     {/* <Signin/> */}
-    <Logintest/>
+    {/* <Logintest/> */}
 
-    <Navbar/> 
-    <Home/>
+    {/* <Navbar/>  */}
+    {/* <Home/> */}
         
-    <TicketBook/>
-    <Contactus/>  
-    <Map/> 
+    {/* <TicketBook/> */}
+    {/* <Contactus/>   */}
+    {/* <Map/>  */}
     {/* <Book/> */}
-    <About/>
+    {/* <About/> */}
+    <Heading/>
     </div>
   )
 }
