@@ -11,6 +11,7 @@ const schema=yup.object().shape({
     email:yup.string().required('Email id is required'),
     gender:yup.string().required('Gender is required'),
     dob:  yup.string().required('Date of Birth is required'),
+    password:yup.string().required('passowrd is required'),
 })
 
 function Signin() {
@@ -30,6 +31,9 @@ function Signin() {
         {placeholder:'E-mail',
          type:'email',
          identiy:'email'},
+         {placeholder:'Password',
+         type:'password',
+         identiy:'password'},
         {label:'Gender',
          identiy:'gender',
          subdata:[
@@ -46,7 +50,8 @@ function Signin() {
          identiy:'dob'},
     ]
   return (
-    <div>
+    <div className='w-full bg-black flex justify-center '>
+          <div className='w-10/12 bg-red-400 '>
         <Formik
         initialValues={{
             fname:'',
@@ -56,6 +61,7 @@ function Signin() {
             email:'',
             gender:'',
             dob:'',
+            password:'',
         }}
         validationSchema={schema}
         onSubmit={(values)=>{
@@ -64,11 +70,12 @@ function Signin() {
         >
             {({handleSubmit})=>{
                 return <Form onSubmit={handleSubmit}>
-                    <div className='w-10/12 grid grid-cols-2'>
+                  
+                        <div className='grid grid-cols-2'>
                         {
                             data.map((val,i)=>{
                                 if(val.subdata){
-                                    return <div key={i}>
+                                    return <div key={i} className='w-full'>
                                         <label className=''>{val.label}</label>
                                         <div>
                                             {val.subdata && val.subdata.map((item,index)=>{
@@ -83,19 +90,22 @@ function Signin() {
                                     </div>
                                 }
                                 else {
-                                    return <div key={i}>
-                                        <Field type={val.type} placeholder={val.placeholder}
-                                        name={val.identiy} className='p-2 text-gray-500 bg-gray-100'/>
+                                    return <div key={i} className='w-full'>
+                                        <Field type={val.type} 
+                                        placeholder={val.placeholder} name={val.identiy} 
+                                        className='w-full p-2 text-gray-500 bg-gray-100'/>
                                     </div>
                                 }
                             })
                         }
+                        </div>
 
-                    </div>
+                    
                 </Form>
             }}
 
         </Formik>
+        </div>
     </div>
   )
 }

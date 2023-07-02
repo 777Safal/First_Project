@@ -121,7 +121,7 @@ function App() {
       
       
 {/* clz */}
-    <Signin/>
+    {/* <Signin/> */}
     <Logintest/>
 
     <Navbar/> 
