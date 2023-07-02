@@ -50,6 +50,7 @@ import Book from './CLZ/Home/Book';
 import Contactus from './CLZ/Contact/Contactus';
 import TicketBook from './CLZ/Book/TicketBook';
 import Map from './CLZ/Contact/Map';
+import About from './CLZ/About us/About';
 
 function App() {
   return (
@@ -128,7 +129,7 @@ function App() {
     <Contactus/>  
     <Map/> 
     {/* <Book/> */}
-    {/* <Aboutus> */}
+    <About/>
     </div>
   )
 }
