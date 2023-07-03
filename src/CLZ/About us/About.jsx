@@ -30,6 +30,13 @@ function About() {
                   bg-cover bg-no-repeat bg-center
                  bg-[url(https://scontent.fktm9-2.fna.fbcdn.net/v/t39.30808-6/319795753_729166351465028_8175149592448094006_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=r_IFm6S8FGUAX96Ul_A&_nc_ht=scontent.fktm9-2.fna&oh=00_AfBJZF50ZFB8njWYvJrapev4NqWC5l5L6PFM7ETBZ6aEtw&oe=64A5CF6F)]'>
                  </div>
+                 {/* <div className='w-20 h-48 bg-black grid grid-rows-4 gap-4
+                 absolute top-10 right-10'>
+                    <div className='bg-red-400'>1</div>
+                    <div className='bg-red-400'>2</div>
+                    <div className='bg-red-400'>3</div>
+                    <div className='bg-red-400'>4</div>
+                 </div> */}
         </div>
     </div>
   )

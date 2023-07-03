@@ -17,11 +17,11 @@ const schema=yup.object().shape({
     Contact_no:yup.string().min(3,'Not sufficent').required('Contact no. is required'),
     Created_At:yup.string().required('Created At is required'),
     Email:yup.string().required('Email is required'),
-    Guardian_Name:yup.string().min(3,'Not sufficent').required('Guardian Name is required'),
-    Guardian_Number:yup.string().required('Guardian Number is required'),
+    gurdain_name:yup.string().min(3,'Not sufficent').required('Guardian Name is required'),
+    gurdain_no:yup.string().required('Guardian Number is required'),
     id:yup.string().min(6,'Not sufficent').required('id is required'),
     Name:yup.string().min(3,'Not sufficent').required('Name is required'),
-    School_Name:yup.string().required('School Name is required'),
+    SchoolName:yup.string().required('School Name is required'),
     Status:yup.string().required('Status is required'),
 })
 function Login() {
@@ -58,15 +58,15 @@ function Login() {
         },
         {   label:'Guardian Name',
             type:'text',
-            identiy:'guardian_Name'
+            identiy:'gurdain_name'
         },
         {   label:'Guardian Number',
             type:'text',
-            identiy:'guardian_Number'
+            identiy:'gurdain_no'
         },
         {   label:'School Name',
             type:'text',
-            identiy:'school_Name'
+            identiy:'schoolName'
         },
         {   label:'Category Name',
             type:'text',
@@ -110,15 +110,11 @@ function Login() {
         },
         {   label:'Source of Information',
             type:'text',
-            identiy:'SourceofInformation'
+            identiy:'SourceOfInformation'
         },
         {   label:'Stage',
             type:'text',
             identiy:'Stage'
-        },
-        {   label:'Created At',
-            type:'text',
-            identiy:'Created_At'
         },
         {   label:'Discount',
             type:'text',
@@ -134,7 +130,7 @@ function Login() {
             identiy:'id'
         },
         {   label:'image',
-            type:'text',
+            type:'file',
             identiy:'image'
         },
         {   label:'Referal contact no',
@@ -166,21 +162,20 @@ function Login() {
                 Gender:'',
                 Level_of_Education:'',
                 Shift:'',
-                SourceofInformation:'',
+                SourceOfInformation:'',
                 Stage:'',
                 address:'',
                 contact_no:'',
-                Created_At:'',
                 discount:'',
                 email:'',
-                guardian_Name:'',
-                guardian_Number:'',
+                gurdain_name:'',
+                gurdain_no:'',
                 id:'',
                 image:'',
                 name:'',
                 referal_contact_no:'',
                 refered_by:'',
-                choolCourseTaken:'',
+                schoolCourseTaken:'',
                 schoolName:'',
                 status:'',
             }}
@@ -189,7 +184,30 @@ function Login() {
                 onSubmit={(values)=>{
                     console.log(values)
                     try {
-                        axios.post('http://192.168.1.147:4003/studentinfo',values).then(res=>{console.log(res)}).catch(err=>{console.log(err)
+                        const formData=new FormData();
+                        formData.append('image',values.image);
+                        formData.append('Category_name',values.Category_name);
+                        formData.append('Course',values.Course);
+                        formData.append('Date',values.Date);
+                        formData.append('Gender',values.Gender);
+                        formData.append('Level_of_Education',values.Level_of_Education);
+                        formData.append('Shift',values.Shift);
+                        formData.append('SourceofInformation',values.SourceOfInformation);
+                        formData.append('Stage',values.Stage);
+                        formData.append('address',values.address);
+                        formData.append('contact_no',values.contact_no);
+                        formData.append('discount',values.discount);
+                        formData.append('email',values.email);
+                        formData.append('gurdain_name',values.gurdain_name);
+                        formData.append('gurdain_no',values.gurdain_no);
+                        formData.append('name',values.name);
+                        formData.append('referal_contact_no',values.referal_contact_no);
+                        formData.append('refered_by',values.refered_by);
+                        formData.append('schoolCourseTaken',values.schoolCourseTaken);
+                        formData.append('schoolName',values.schoolName);
+                        formData.append('status',values.status);
+
+                        axios.post('http://192.168.1.147:4003/studentinfo/',formData).then(res=>{console.log(res)}).catch(err=>{console.log(err)
 
                         })
                     } catch (error){
@@ -206,10 +224,10 @@ function Login() {
                                         <div key={i} className='flex flex-col'>
                                             <label className='text-base text-gray-500
                                         font-bbbb font-medium'>{val.label}</label>
-                                            <Field as={'select'} className='bg-gray-100 mt-1 px-1 py-2 w-full rounded-md'>
+                                            <Field as={'select'} name={val.identiy} className='bg-gray-100 mt-1 px-1 py-2 w-full rounded-md'>
                                                 {val.options.map((item,index)=>{
                                                     return <option className='text-sm text-gray-500
-                                                    font-bbbb font-medium'>{item.name}</option>
+                                                    font-bbbb font-medium' value={item.name}>{item.name}</option>
                                                 })}
                                             </Field>
                                         </div>
@@ -237,7 +255,18 @@ function Login() {
                                         </div>
                                     }
                                     else {
-                                        return <div key={i} className='flex flex-col mb-2 justify-center'>
+                                        if(val.type==='file'){
+                                            return <div key={i} className=''>
+                                                <label className='text-base text-gray-500
+                                             font-bbbb font-medium mb-1'>{val.label}</label>
+                                             <input  onChange={(e)=>{
+setFieldValue('image',e.target.files[0])
+                                             }}  type={'file'} name={val.identiy} className='bg-gray-100 
+                                             text-gray-500 outline-none px-1 py-2 rounded-md'/>
+                                            </div>
+                                        }
+                                        else{
+                                            return <div key={i} className='flex flex-col mb-2 justify-center'>
                                             <label className='text-base text-gray-500
                                              font-bbbb font-medium mb-1'>
                                                 {val.label}
@@ -249,6 +278,7 @@ function Login() {
                                             <ErrorMessage name={val.identiy} component={'div'}
                                             className='text-red-400 text-sm font-semibold'/>
                                         </div>
+                                        }
                                     }
                                 }
                             })}
