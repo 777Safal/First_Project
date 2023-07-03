@@ -1,5 +1,6 @@
 import { type } from '@testing-library/user-event/dist/type'
 import React from 'react'
+import Aos from 'aos'
 
 function TicketBook() {
   const time=[
@@ -26,8 +27,8 @@ function TicketBook() {
         {h1:'Next Day'},
       ]
   return (
-    <div className='w-full mt-10  flex justify-center'>
-        <div className='w-10/12 rounded-sm relative bg-yellow-300 
+    <div className='w-full mt-10 relative flex justify-center'>
+        <div className='w-10/12 rounded-sm  bg-yellow-300 
         py-10 px-3 font-bbbb'>
           <div className='w-56 py-5 mb-6 bg-red-600 text-xl text-white 
           font-semibold text-center rounded-sm'>BOOK YOUR DAY
@@ -55,8 +56,10 @@ function TicketBook() {
                 </button>
               })}
           </div>
-          <div className='w-24 h-24 absolute top-32 right-0 bg-contain bg-no-repeat motion-safe:animate-bounce
-          bg-[url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png?20190202162056)]'>
+          <div className='w-24 h-24 absolute top-32 right-32 bg-contain bg-no-repeat motion-safe:animate-bounce
+          bg-[url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png?20190202162056)]'
+          data-aos-slide='slide-right' data-aos-offset="150" data-aos-easing="ease-in  -sine" data-aos-delay='300'
+          >
           </div>
         </div>
     </div>

@@ -5,6 +5,7 @@ import {TbMail} from 'react-icons/tb'
 import {Form,Formik,ErrorMessage,Field} from 'formik'
 import * as yup from 'yup'
 import { MdTextFields } from 'react-icons/md'
+import Aos from 'aos'
 
 const schema=yup.object().shape({
   name:yup.string().min(3,'Not sufficent').required('Name is required'),
@@ -52,7 +53,9 @@ function Contactus() {
         </div>
         <div className='w-full flex mb-10  justify-center font-bbbb tracking-wider'>
           <div className='w-10/12 bg-transparent rounded-md overflow-hidden relative flex'> 
-            <div className='w-2/6 py-3 pl-5 mr-10 rounded-md bg-yellow-300'>
+            <div className='w-2/6 py-3 pl-5 mr-10 rounded-md bg-yellow-300'
+            data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine" data-aos-delay='300'
+            >
               <div className=' text-3xl font-bold text-slate-700'>{heading[1].h1}</div>
                 <div>
                   {contact.map((val,i)=>{
@@ -70,7 +73,9 @@ function Contactus() {
                 </div>
             </div>
             {/* form section */}
-            <div className='w-4/6 px-5 py-3 rounded-md bg-yellow-300'>
+            <div className='w-4/6 px-5 py-3 rounded-md bg-yellow-300'
+            data-aos='fade-up' data-aos-easing="ease-in-sine" data-aos-delay='300' data-aos-offset="300"
+            >
               <div className=' text-3xl mb-8 font-bold text-slate-700'>{heading[2].h1}</div>
                   <Formik 
                   initialValues={{

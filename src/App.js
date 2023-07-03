@@ -125,12 +125,12 @@ function App() {
     {/* <Signin/> */}
     {/* <Logintest/> */}
 
-    {/* <Navbar/>  */}
-    {/* <Home/> */}
+    <Navbar/> 
+    <Home/>
         
-    {/* <TicketBook/> */}
-    {/* <Contactus/>   */}
-    {/* <Map/>  */}
+    <TicketBook/>
+    <Contactus/>  
+    <Map/> 
     {/* <Book/> */}
     {/* <About/> */}
     <Heading/>
