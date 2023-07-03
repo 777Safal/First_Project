@@ -54,7 +54,7 @@ function Contactus() {
         <div className='w-full flex mb-10  justify-center font-bbbb tracking-wider'>
           <div className='w-10/12 bg-transparent rounded-md overflow-hidden relative flex'> 
             <div className='w-2/6 py-3 pl-5 mr-10 rounded-md bg-yellow-300'
-            data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine" data-aos-delay='300'
+            data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in  -sine" data-aos-delay='300'
             >
               <div className=' text-3xl font-bold text-slate-700'>{heading[1].h1}</div>
                 <div>
