@@ -59,7 +59,7 @@ function Contactus() {
             data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in  -sine" data-aos-delay='300'
             >
               <div className=' text-3xl font-bold text-slate-700'>{heading[1].h1}</div>
-                <div>
+              <div>
                   {contact.map((val,i)=>{
                     return <div key={i} className='my-8'>
                       <div className='text-xl font-bold text-slate-700'>{val.h1}</div>
@@ -72,7 +72,7 @@ function Contactus() {
                       </div>
                     </div>
                   })}
-                </div>
+              </div>
             </div>
             {/* form section */}
             <div className='w-4/6 px-5 py-3 rounded-md bg-yellow-300 dark:bg-slate-300'

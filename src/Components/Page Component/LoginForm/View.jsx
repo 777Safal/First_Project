@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import Login from './Login'
+import axios from 'axios'
 
 function View() {
     const [action,setaction]=useState('add')
@@ -13,24 +14,28 @@ function View() {
         {h1:'School Name'},
         {h1:'Category Name'},
     ]
-    
+    const getdata=()=>{
+        try {
+            axios.get('http://192.168.1.147:4003/studentinfo/').then(res=>{console.log(res)}).catch(err=>{console.log(err)})
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    const [getting,setgetting]=useState('getdata')
+
   return (
     <div>
        <div>
-                <table>
+            <table>
             <tr>
                 {headings.map((val,i)=>{
                     return <th key={i} className='px-3 py-1 border-2 border-black'>{val.h1}</th>
                 })}    
             </tr>
 
-        </table>   
-        {/* <div className='flex justify-between my-10'>
-                            <div><button onClick={()=>setaction('add')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md' >Add</button></div>
-                            <div><button onClick={()=>setaction('view')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md'>View</button></div>
-                        </div> */}
-            </div>
             
+        </table>   
+        </div>
     </div>
   )
 }

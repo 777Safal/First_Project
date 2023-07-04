@@ -11,18 +11,19 @@ const schema=yup.object().shape({
     Gender:yup.string().required('Gender is required'),
     Level_of_Education:yup.string().required('Level of Education is required'),
     Shift:yup.string().required('Shift is required'),
-    Source_of_Information:yup.string().required('Source of Information is required'),
+    SourceOfInformation:yup.string().required('Source of Information is required'),
     Stage:yup.string().min(3,'Not sufficent').required('Stage is required'),
-    Address:yup.string().min(3,'Not sufficent').required('Address is required'),
-    Contact_no:yup.string().min(3,'Not sufficent').required('Contact no. is required'),
-    Created_At:yup.string().required('Created At is required'),
-    Email:yup.string().required('Email is required'),
+    address:yup.string().min(3,'Not sufficent').required('Address is required'),
+    contact_no:yup.string().min(3,'Not sufficent').required('Contact no. is required'),
+    email:yup.string().required('Email is required'),
     gurdain_name:yup.string().min(3,'Not sufficent').required('Guardian Name is required'),
     gurdain_no:yup.string().required('Guardian Number is required'),
     id:yup.string().min(6,'Not sufficent').required('id is required'),
-    Name:yup.string().min(3,'Not sufficent').required('Name is required'),
-    SchoolName:yup.string().required('School Name is required'),
-    Status:yup.string().required('Status is required'),
+    name:yup.string().min(3,'Not sufficent').required('Name is required'),
+    schoolName:yup.string().required('School Name is required'),
+    status:yup.string().required('Status is required'),
+    discount:yup.string(),
+    image:yup.string()
 })
 function Login() {
    
@@ -190,9 +191,9 @@ function Login() {
                         formData.append('Course',values.Course);
                         formData.append('Date',values.Date);
                         formData.append('Gender',values.Gender);
-                        formData.append('Level_of_Education',values.Level_of_Education);
+                        formData.append('Level_Of_Education',values.Level_of_Education);
                         formData.append('Shift',values.Shift);
-                        formData.append('SourceofInformation',values.SourceOfInformation);
+                        formData.append('SourceOfInformation',values.SourceOfInformation);
                         formData.append('Stage',values.Stage);
                         formData.append('address',values.address);
                         formData.append('contact_no',values.contact_no);

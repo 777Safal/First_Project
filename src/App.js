@@ -118,22 +118,22 @@ function App() {
       
       {/* <NewHooks/> */}
       {/* <View/> */}
-      {/* <Login/> */}
+      <Login/>
       
       
 {/* clz */}
     {/* <Signin/> */}
     {/* <Logintest/> */}
 
-    <Navbar/> 
+    {/* <Navbar/>  */}
     {/* <Home/> */}
         
     {/* <TicketBook/> */}
-    <Contactus/>  
+    {/* <Contactus/>   */}
     {/* <Map/>  */}
     {/* <Book/> */}
     {/* <About/> */}
-    <Heading/>
+    {/* <Heading/> */}
     </div>
   )
 }
