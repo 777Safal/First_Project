@@ -9,7 +9,7 @@ function Heading() {
     ]
   return (
     <div className='w-full ' >
-        <div data-aos="fade-right"
+        <div data-aos="fade-right" data-aos-once="true"
         className=' h-56 flex items-center justify-center 
         bg-no-repeat bg-cover bg-center bg-opacity-10
         bg-[url(https://img.freepik.com/premium-vector/banner-design-football-ball-with-flag-luxembourg-football-net-goal-by-national-soccer-team-luxembourg_292608-23406.jpg?size=626&ext=jpg)]'>

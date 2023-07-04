@@ -4,13 +4,13 @@ import * as yup from 'yup'
 import { type } from '@testing-library/user-event/dist/type'
 
 const schema=yup.object().shape({
-    fname:yup.string().required('First name is required'),
-    lname:yup.string().required('Last name is required'),
+    first_name:yup.string().required('First name is required'),
+    last_name:yup.string().required('Last name is required'),
     address:yup.string().required('Address is required'),
     contact_no:yup.string().required('contact no. is required'),
     email:yup.string().required('Email id is required'),
     gender:yup.string().required('Gender is required'),
-    dob:  yup.string().required('Date of Birth is required'),
+    date_of_birt:  yup.string().required('Date of Birth is required'),
     password:yup.string().required('passowrd is required'),
 })
 
@@ -18,10 +18,10 @@ function Signin() {
     const data=[
         {placeholder:'First Name',
          type:'text',
-         identiy:'fname'},
+         identiy:'first_name'},
         {placeholder:'Last Name',
          type:'text',
-         identiy:'lname'},
+         identiy:'last_name'},
         {placeholder:'Address',
          type:'text',
          identiy:'address'},
@@ -47,20 +47,20 @@ function Signin() {
         },
         {placeholder:'Date of birth',
          type:'date',
-         identiy:'dob'},
+         identiy:'date_of_birt'},
     ]
   return (
-    <div className='w-full bg-black flex justify-center '>
-          <div className='w-10/12 bg-red-400 '>
+    <div className='max-h-screen bg-black flex items-center justify-center '>
+          <div className='w-2/4 bg-white'>
         <Formik
         initialValues={{
-            fname:'',
-            lname:'',
+            first_name:'',
+            last_name:'',
             address:'',
             contact_no:'',
             email:'',
             gender:'',
-            dob:'',
+            date_of_birt:'',
             password:'',
         }}
         validationSchema={schema}
@@ -70,16 +70,15 @@ function Signin() {
         >
             {({handleSubmit})=>{
                 return <Form onSubmit={handleSubmit}>
-                  
-                        <div className='grid grid-cols-2'>
+                        <div className='grid grid-cols-2 gap-2'>
                         {
                             data.map((val,i)=>{
                                 if(val.subdata){
                                     return <div key={i} className='w-full'>
-                                        <label className=''>{val.label}</label>
-                                        <div>
+                                        <label className='bg-pink-7-'>{val.label}</label>
+                                        <div className='flex flex-row '>
                                             {val.subdata && val.subdata.map((item,index)=>{
-                                                return <div key={index}>
+                                                return <div key={index} className='pl-2'>
                                                     <label>{item.name}</label>
                                                     <input type={item.type} name={val.identiy}/>
                                                     <ErrorMessage name={val.identiy} component={'div'}/>
@@ -93,7 +92,7 @@ function Signin() {
                                     return <div key={i} className='w-full'>
                                         <Field type={val.type} 
                                         placeholder={val.placeholder} name={val.identiy} 
-                                        className='w-full p-2 text-gray-500 bg-gray-100'/>
+                                        className='w-full p-2 text-gray-500 bg-gray-100 rounded-md'/>
                                     </div>
                                 }
                             })

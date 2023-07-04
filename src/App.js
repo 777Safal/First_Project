@@ -122,18 +122,18 @@ function App() {
       
       
 {/* clz */}
-    {/* <Signin/> */}
-    <Logintest/>
+    <Signin/>
+    {/* <Logintest/> */}
 
-    <Navbar/> 
-    <Home/>
+    {/* <Navbar/>  */}
+    {/* <Home/> */}
         
-    <TicketBook/>
-    <Contactus/>  
-    <Map/> 
+    {/* <TicketBook/> */}
+    {/* <Contactus/>   */}
+    {/* <Map/>  */}
     {/* <Book/> */}
-    <About/>
-    <Heading/>
+    {/* <About/> */}
+    {/* <Heading/> */}
     </div>
   )
 }

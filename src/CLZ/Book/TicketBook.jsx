@@ -60,11 +60,11 @@ function TicketBook() {
                 </button>
               })}
           </div>
-          <div className='w-24 h-24 absolute top-32 right-32 bg-contain bg-no-repeat motion-safe:animate-bounce
+          {/* <div className='w-24 h-24 absolute top-32 right-32 bg-contain bg-no-repeat motion-safe:animate-bounce
           bg-[url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/500px-Soccerball.svg.png?20190202162056)]'
           data-aos-slide='slide-right' data-aos-offset="150" data-aos-easing="ease-in  -sine" data-aos-delay='300'
           >
-          </div>
+          </div> */}
           
         </div>
     </div>
