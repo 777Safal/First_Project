@@ -26,12 +26,15 @@ function TicketBook() {
         {h1:'Tomorrow'},
         {h1:'Next Day'},
       ]
+      const paragraph=[
+        {p:'Join us in the battle of the fastest feet, where every touch of the ball sends a surge of excitement through the crowd. Lace up your boots and become a maestro of futsal in the arena!'}
+      ]
   return (
-    <div className='w-full mt-10 relative flex justify-center'>
+    <div className=' mt-10 relative flex justify-center'>
         <div className='w-10/12 rounded-sm  bg-yellow-300 
         py-10 px-3 font-bbbb'>
-          <div className='w-56 py-5 mb-6 bg-red-600 text-xl text-white 
-          font-semibold text-center rounded-sm'>BOOK YOUR DAY
+          <div className='text-zinc-700 text-base font-poping tracking-wider'>
+            {paragraph[0].p}
           </div>
           <div className='flex items-center mb-6'>
             {date.map((val,i)=>{
@@ -48,6 +51,7 @@ function TicketBook() {
           <div className='w-full flex grid grid-cols-8 gap-2 '>
               {time.map((val,i)=>{
                 return <button
+                data-aos="slide-up" data-aos-once="true"
                 className='px-3 py-4 flex justify-between rounded-md text-center 
                 text-sm font-medium bg-lime-500 hover:bg-lime-700 hover:text-white
                 transition ease-in-out delay-150 hover:translate-2 hover:scale-125 duration-300'>
@@ -61,6 +65,7 @@ function TicketBook() {
           data-aos-slide='slide-right' data-aos-offset="150" data-aos-easing="ease-in  -sine" data-aos-delay='300'
           >
           </div>
+          
         </div>
     </div>
   )
