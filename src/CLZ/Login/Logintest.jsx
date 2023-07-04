@@ -26,7 +26,7 @@ function Logintest() {
     ]
     
       return (
-        <div className='bg-gradient-to-b from-yellow-200 to-white w-full h-screen flex justify-center items-center'>
+        <div className='bg-gradient-to-b from-yellow-200 to-white h-screen flex justify-center items-center'>
             <div className='w-9/12 h-4/5 overflow-hidden rounded-lg shadow-2xl flex flex-row'>
                 {/* Logins */}
                 <div className='bg-white w-2/5 h-full flex flex-col items-center shadow-2xl shadow-red-800'> 

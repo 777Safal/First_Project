@@ -123,7 +123,7 @@ function App() {
       
 {/* clz */}
     <Signin/>
-    {/* <Logintest/> */}
+    <Logintest/>
 
     {/* <Navbar/>  */}
     {/* <Home/> */}

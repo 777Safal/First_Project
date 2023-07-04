@@ -50,8 +50,14 @@ function Signin() {
          identiy:'date_of_birt'},
     ]
   return (
-    <div className='max-h-screen bg-black flex items-center justify-center '>
-          <div className='w-2/4 bg-white'>
+    <div className='h-screen bg-gradient-to-b from-yellow-200 to-white flex items-center justify-center '>
+          <div className='w-2/4 bg-white rounded-md'>
+          <div className='flex justify-center'>
+            <div className='w-32 h-32 rounded-ful flex'>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREV7OqbWAYbL_nNEO2AFXJRwOvvTD-I4MwXMgZjnsb2A&s"  />
+            </div>
+          </div>
+          <div className='text-center text-lg font-bold text-red-600'>Monalisa Futsal</div>
         <Formik
         initialValues={{
             first_name:'',
@@ -70,11 +76,11 @@ function Signin() {
         >
             {({handleSubmit})=>{
                 return <Form onSubmit={handleSubmit}>
-                        <div className='grid grid-cols-2 gap-2'>
+                        <div className='grid grid-cols-2 gap-2 my-5'>
                         {
                             data.map((val,i)=>{
                                 if(val.subdata){
-                                    return <div key={i} className='w-full'>
+                                    return <div key={i} className='h-20'>
                                         <label className='bg-pink-7-'>{val.label}</label>
                                         <div className='flex flex-row '>
                                             {val.subdata && val.subdata.map((item,index)=>{
@@ -92,7 +98,7 @@ function Signin() {
                                     return <div key={i} className='w-full'>
                                         <Field type={val.type} 
                                         placeholder={val.placeholder} name={val.identiy} 
-                                        className='w-full p-2 text-gray-500 bg-gray-100 rounded-md'/>
+                                        className='w-full p-2 text-gray-500 bg-yellow-100 rounded-md'/>
                                     </div>
                                 }
                             })
