@@ -10,7 +10,7 @@ const schema=yup.object().shape({
     contact_no:yup.string().required('contact no. is required'),
     email:yup.string().required('Email id is required'),
     gender:yup.string().required('Gender is required'),
-    date_of_birt:  yup.string().required('Date of Birth is required'),
+    date_of_birth:  yup.string().required('Date of Birth is required'),
     password:yup.string().required('passowrd is required'),
 })
 
@@ -22,9 +22,6 @@ function Signin() {
         {placeholder:'Last Name',
          type:'text',
          identiy:'last_name'},
-        {placeholder:'Address',
-         type:'text',
-         identiy:'address'},
         {placeholder:'Contact no.',
          type:'text',
          identiy:'contact_no'},
@@ -34,7 +31,10 @@ function Signin() {
          {placeholder:'Password',
          type:'password',
          identiy:'password'},
-        {label:'Gender',
+         {placeholder:'Address',
+         type:'text',
+         identiy:'address'},
+        {label:'Gender:',
          identiy:'gender',
          subdata:[
             {name:'Male',
@@ -45,19 +45,20 @@ function Signin() {
             type:'radio',},
          ]
         },
-        {placeholder:'Date of birth',
+        {label:'Date of Birth:',
          type:'date',
-         identiy:'date_of_birt'},
+         identiy:'date_of_birth'},
     ]
   return (
-    <div className='h-screen bg-gradient-to-b from-yellow-200 to-white flex items-center justify-center '>
-          <div className='w-2/4 bg-white rounded-md'>
+    <div className='bg-gradient-to-b font-poping from-yellow-200 to-white flex items-center justify-center '>
+          <div className='w-3/4 my-10 p-5 bg-white rounded-md shadow-2xl'>
           <div className='flex justify-center'>
             <div className='w-32 h-32 rounded-ful flex'>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREV7OqbWAYbL_nNEO2AFXJRwOvvTD-I4MwXMgZjnsb2A&s"  />
             </div>
           </div>
-          <div className='text-center text-lg font-bold text-red-600'>Monalisa Futsal</div>
+          <div className='text-center text-2xl tracking-wide font-bold text-red-600'>Monalisa Futsal</div>
+          <div className='mt-1 text-center text-lg tracking-wide font-semibold text-zinc-800'>Create new account</div>
         <Formik
         initialValues={{
             first_name:'',
@@ -66,7 +67,7 @@ function Signin() {
             contact_no:'',
             email:'',
             gender:'',
-            date_of_birt:'',
+            date_of_birth:'',
             password:'',
         }}
         validationSchema={schema}
@@ -76,33 +77,57 @@ function Signin() {
         >
             {({handleSubmit})=>{
                 return <Form onSubmit={handleSubmit}>
-                        <div className='grid grid-cols-2 gap-2 my-5'>
-                        {
-                            data.map((val,i)=>{
-                                if(val.subdata){
-                                    return <div key={i} className='h-20'>
-                                        <label className='bg-pink-7-'>{val.label}</label>
-                                        <div className='flex flex-row '>
-                                            {val.subdata && val.subdata.map((item,index)=>{
-                                                return <div key={index} className='pl-2'>
-                                                    <label>{item.name}</label>
-                                                    <input type={item.type} name={val.identiy}/>
-                                                    <ErrorMessage name={val.identiy} component={'div'}/>
-                                                </div>
-                                            })}
+                        <div className='my-5'>
+                            <div className='grid grid-cols-2 gap-2'>
+                                {
+                                data.map((val,i)=>{
+                                    if(val.subdata){
+                                        return <div key={i} className='h-14 text-zinc-700'>
+                                            <div className='px-2 py-2 flex flex-row bg-yellow-100 shadow-sm'>
+                                            <label >{val.label}</label>
+                                            <div className='text-sm grid grid-cols-3 w-full items-center text-center'>
+                                                {val.subdata && val.subdata.map((item,index)=>{
+                                                    return <div key={index} className='px-1'>
+                                                        <label>{item.name}</label>
+                                                        <input type={item.type} 
+                                                        name={val.identiy} className='ml-1'/>
+                                                    </div>
+                                                })} 
+                                            </div>
+                                            </div>
+                                            <ErrorMessage name={val.identiy} component={'div'}
+                                            className='text-red-600 text-sm'/>
                                         </div>
-                                        
-                                    </div>
+                                    }
+                                    else {
+                                        if(val.type==='date'){
+                                            return <div key={i} className='h-14 text-zinc-700 '>
+                                                <div className='px-2 py-2 shadow-sm bg-yellow-100'>
+                                                    <label>{val.label}</label >
+                                                    <input type={val.type} name={val.identiy} 
+                                                    className='bg-yellow-100 ml-2'/>
+                                                </div>
+                                                <ErrorMessage name={val.identiy} 
+                                                component={'div'} className='text-red-600 text-sm'/>
+                                                </div>
+                                            }
+                                        else {
+                                            return <div key={i} className='h-14'>
+                                            <Field type={val.type} 
+                                            placeholder={val.placeholder} name={val.identiy} 
+                                            className='w-full px-2 py-2 outline-none shadow-sm bg-yellow-100 rounded-md placeholder-zinc-700'/>
+                                            <ErrorMessage name={val.identiy} component={'div'} className='text-red-600 text-sm'/>
+                                            </div>
+                                            }
+                                        }
+                                    })
                                 }
-                                else {
-                                    return <div key={i} className='w-full'>
-                                        <Field type={val.type} 
-                                        placeholder={val.placeholder} name={val.identiy} 
-                                        className='w-full p-2 text-gray-500 bg-yellow-100 rounded-md'/>
-                                    </div>
-                                }
-                            })
-                        }
+                            </div>
+                            <div className='flex justify-center mt-2'>
+                                <button type='submit'
+                                className='px-5 py-2 bg-yellow-200 text-red-600 font-semibold text-lg
+                                hover:text-yellow-400 hover:bg-red-600 rounded-md '>Submit</button>
+                             </div>
                         </div>
 
                     
