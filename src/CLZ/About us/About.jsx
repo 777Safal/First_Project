@@ -20,58 +20,52 @@ function About() {
         {p:'At MonaLisa Futsal Booking, we are committed to fostering a strong futsal community. We organize regular tournaments, leagues, and special events, giving players the opportunity to showcase their skills and connect with fellow enthusiasts. We believe in the power of futsal to bring people together, and we actively support local initiatives and charities to give back to the community we serve.'}
     ]
   return (
-    <div className='w-full mb-10'>
+    <div className='mb-10'>
         <div className='bg-cover bg-no-repeat w-full h-60 bg-bottom flex items-center 
-        justify-center relative top-0
+        justify-center
         bg-[url(https://static.africa-press.net/cape-verde/sites/66/2023/05/postQueueImg_1684141131.67.jpg)]'
          data-aos="fade-left" data-aos-once="true">
             <div className='pb-2 text-5xl text-yellow-300 font-poping font-extrabold
             border-b-4 border-red-600'>{headings[0].h1}</div>
         </div>
-        <div className='w-full'>
-          <div className='flex' >
-            <div className='max-w-[85ch] m-auto flex flex-col justify-center px4 py-2'>
-              <div className='mb-3 text-3xl font-poping font-bold text-yellow-300 animate-pulse'>{headings[1].h1}</div>  
-              <div className='font-poping text-sm text-center font-medium tracking-wide
-                text-zinc-700'>
-                  <p>{para[0].p}</p>
-                  <p className='text-center'>{para[1].p}</p>
+        <div className='flex justify-center'>
+          <div className='w-10/12 grid grid-cols-4 gap-2'>
+              <div className='h-80 bg-blue-300 flex flex-col justify-center'>
+                <div className='text-3xl font-poping font-bold text-yellow-300 animate-pulse'>{headings[1].h1}</div>  
+                <div className='font-poping text-sm text-justify font-medium tracking-wide
+                  text-zinc-700'>
+                    <p>{para[0].p}</p>
+                  </div>
+              </div>           
+              <div className='h-80 bg-pink-300  flex flex-col justify-center'>
+                <div className='text-3xl font-poping font-bold text-yellow-300 animate-pulse'>{headings[2].h1}</div>  
+                <div className='font-poping text-sm text-center font-medium tracking-wide
+                    text-zinc-700'>
+                      <p>{para[2].p}</p>
+                    </div>
+                </div>           
+                <div className='h-80 bg-green-300  flex flex-col justify-center'>
+                  <div className='text-3xl font-poping font-bold text-yellow-300 animate-pulse'>{headings[3].h1}</div>  
+                  <div className='font-poping text-sm text-center font-medium tracking-wide
+                    text-zinc-700'>
+                      <p>{para[3].p}</p>
+                    </div>
                 </div>
-            </div>
-          </div>       
-          <div className='flex'>
-            <div className='max-w-[85ch] m-auto flex flex-col justify-center px4 py-2'>
-                <div className='mb-3 text-3xl font-poping font-bold text-yellow-300 animate-pulse'>{headings[2].h1}</div>  
-                <div className='font-poping text-sm text-center font-medium tracking-wide
-                  text-zinc-700'>
-                    <p>{para[2].p}</p>
-                  </div>
-              </div>
+              <div className='h-80 bg-gray-300  flex flex-col justify-center'>
+                  <div className='text-3xl font-poping font-bold text-yellow-300 animate-pulse'>{headings[4].h1}</div>  
+                  <div className='font-poping text-sm text-center font-medium tracking-wide
+                    text-zinc-700'>
+                      <p>{para[4].p}</p>
+                    </div>
+                </div>
+            
           </div>
-          <div className='flex'>
-            <div className='max-w-[85ch] m-auto flex flex-col justify-center px4 py-2'>
-                <div className='mb-3 text-3xl font-poping font-bold text-yellow-300 animate-pulse'>{headings[3].h1}</div>  
-                <div className='font-poping text-sm text-center font-medium tracking-wide
-                  text-zinc-700'>
-                    <p>{para[3].p}</p>
-                  </div>
-              </div>
-          </div>
-          <div className='flex'>
-            <div className='max-w-[85ch] m-auto flex flex-col justify-center px4 py-2'>
-                <div className='mb-3 text-3xl font-poping font-bold text-yellow-300 animate-pulse'>{headings[4].h1}</div>  
-                <div className='font-poping text-sm text-center font-medium tracking-wide
-                  text-zinc-700'>
-                    <p>{para[4].p}</p>
-                  </div>
-              </div>
-          </div>
-          <div className='flex justify-center font-poping text-zinc-700 text-center'>
+        </div>
+        <div className='flex justify-center font-poping text-zinc-700 text-center'>
             <div className='max-w-[105ch]'>
               {slogan[0].p}
             </div>
           </div>
-        </div>
     </div>
   )
 }

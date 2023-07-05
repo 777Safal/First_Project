@@ -23,7 +23,7 @@ function Signin() {
          type:'text',
          identiy:'last_name'},
         {placeholder:'Contact no.',
-         type:'text',
+         type:'number',
          identiy:'contact_no'},
         {placeholder:'E-mail',
          type:'email',
