@@ -28,36 +28,44 @@ function About() {
             <div className='pb-2 text-5xl text-yellow-300 font-poping font-extrabold
             border-b-4 border-red-600'>{headings[0].h1}</div>
         </div>
-        <div className='h-screen mt-10 flex'>
-             <div className='h-80 w-52 overflow-hidden bg-blue-300 flex flex-col'>
-                <div className='text-3xl font-poping font-bold text-center  leading-6 text-yellow-300 
-                animate-pulse'>{headings[1].h1}</div>  
-                <div className='font-poping text-sm text-justify font-normal
-                  text-zinc-700'>
+        <div className='flex flex-col items-center mt-10 font-poping headings[]:animate-pulse'>
+            <div className='w-10/12 flex justify-start'>
+            <div className='max-w-[85ch] p-2 text-left flex flex-col border-b-2 border-l-2 
+            border-yellow-300' data-aos="fade-left" data-aos-once="true">
+             <div className='text-3xl font-bold leading-6 text-yellow-300 
+                 animate-pulse'>{headings[1].h1}</div>  
+                <div className='text-sm font-normal text-zinc-700'>
                     <p>{para[0].p}</p>
                   </div>
-              </div>           
-              <div className='h-80 w-52 overflow-hidden bg-pink-300  flex flex-col'>
-                <div className='text-3xl font-poping font-bold text-center  leading-6 text-yellow-300 animate-pulse'>{headings[2].h1}</div>  
-                <div className='font-poping text-sm text-justify font-normal
-                    text-zinc-700'>
+              </div>
+            </div>           
+            <div className='w-10/12 flex justify-end my-5'>
+            <div className='max-w-[85ch] p-2 text-right flex flex-col border-r-2 border-b-2
+             border-yellow-300' data-aos="fade-left" data-aos-once="true">
+                <div className='text-3xl font-bold leading-6 text-yellow-300 animate-pulse'>{headings[2].h1}</div>  
+                <div className='text-sm font-normal text-zinc-700'>
                       <p>{para[1].p}</p>
                     </div>
-                </div>           
-                <div className='h-80 w-52 overflow-hidden bg-green-300  flex flex-col'>
-                  <div className='text-3xl font-poping font-bold text-center  leading-6 text-yellow-300 animate-pulse'>{headings[3].h1}</div>  
-                  <div className='font-poping text-sm text-justify font-normal
-                    text-zinc-700'>
+                </div>
+            </div>  
+            <div className='w-10/12 flex justify-start '>
+                <div className='max-w-[85ch] p-2 text-left flex flex-col border-b-2 border-l-2 
+            border-yellow-300'  data-aos="fade-left" data-aos-once="true">
+                  <div className='text-3xl font-bold leading-6 text-yellow-300 animate-pulse'>{headings[3].h1}</div>  
+                  <div className='text-sm font-normal text-zinc-700'>
                       <p>{para[2].p}</p>
                     </div>
                 </div>
-              <div className='h-80 w-52 overflow-hidden bg-gray-300  flex flex-col'>
-                  <div className='text-3xl font-poping font-bold text-center leading-6 text-yellow-300 animate-pulse'>{headings[4].h1}</div>  
-                  <div className='font-poping text-sm text-justify font-normal
-                    text-zinc-700'>
-                      <p>{para[3].p}</p>
-                    </div>
+            </div>
+            <div className='w-10/12 flex justify-end my-5'>
+              <div className='max-w-[85ch] p-2 text-right flex flex-col border-r-2 border-b-2
+             border-yellow-300'  data-aos="fade-left" data-aos-once="true">
+                <div className='text-3xl font-bold  leading-6 text-yellow-300 animate-pulse'>{headings[4].h1}</div>  
+                <div className='text-sm font-normal text-zinc-700'>
+                  <p>{para[3].p}</p>
                 </div>
+              </div>
+            </div>
         </div>
         {/* image ball rotate section */}
         {/* <div className='h-screen flex justify-center items-center'>
