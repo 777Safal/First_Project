@@ -24,33 +24,33 @@ function About() {
         <div className='bg-cover bg-no-repeat w-full h-60 bg-bottom flex items-center 
         justify-center
         bg-[url(https://static.africa-press.net/cape-verde/sites/66/2023/05/postQueueImg_1684141131.67.jpg)]'
-         data-aos="fade-down-right" data-aos-once="true">
+         data-aos="fade-down-right" data-aos-once="true"  >
             <div className='pb-2 text-5xl text-yellow-300 font-poping font-extrabold
             border-b-4 border-red-600'>{headings[0].h1}</div>
         </div>
         <div className='flex flex-col mt-10 font-poping headings[]:animate-pulse'>
-            <div className='relative'>
-            <div className='max-w-[85ch] ml-24 p-2 text-left flex flex-col border-b-2 border-l-2 
-            border-yellow-300' data-aos="fade-down-left" data-aos-once="true">
+            <div className='flex justify-start my-10'>
+            <div className='max-w-[85ch] ml-24 p-2 text-left flex flex-col border-b-4 border-l-8 
+            border-yellow-300' data-aos="fade-down-right" data-aos-once="true" data-aos-duration="900">
              <div className='text-3xl font-bold leading-6 text-yellow-300 
-                 animate-pulse'>{headings[1].h1}</div>  
+                 animate-pulse '>{headings[1].h1}</div>  
                 <div className='text-sm font-normal text-zinc-700'>
                     <p>{para[0].p}</p>
                   </div>
               </div>
             </div>    
-            <div className='flex justify-end'>
-            <div className='max-w-[85ch] mr-24 p-2 text-right flex flex-col border-r-2 border-b-2
-             border-yellow-300' data-aos="fade-down-left" data-aos-once="true">
+            <div className='flex justify-end my-10'>
+            <div className='max-w-[85ch] mr-24 p-2 text-right flex flex-col border-r-8 border-b-4
+             border-yellow-300' data-aos="fade-down-left" data-aos-once="true" data-aos-duration="900">
                 <div className='text-3xl font-bold leading-6 text-yellow-300 animate-pulse'>{headings[2].h1}</div>  
                 <div className='text-sm font-normal text-zinc-700'>
                       <p>{para[1].p}</p>
                     </div>
                 </div>
             </div>  
-            <div className='flex justify-start '>
-                <div className='max-w-[85ch] ml-24 p-2 text-left flex flex-col border-b-2 border-l-2 
-            border-yellow-300'  data-aos="fade-down-left" data-aos-once="true">
+            <div className='flex justify-start my-10'>
+                <div className='max-w-[85ch] ml-24 p-2 text-left flex flex-col border-b-4 border-l-8 
+            border-yellow-300'  data-aos="fade-down-right" data-aos-once="true" data-aos-duration="900">
                   <div className='text-3xl font-bold leading-6 text-yellow-300 animate-pulse'>{headings[3].h1}</div>  
                   <div className='text-sm font-normal text-zinc-700'>
                       <p>{para[2].p}</p>
@@ -58,8 +58,8 @@ function About() {
                 </div>
             </div>
             <div className='flex justify-end'>
-              <div className='max-w-[85ch] mr-24 p-2 text-right flex flex-col border-r-2 border-b-2
-             border-yellow-300'  data-aos="fade-down-right" data-aos-once="true">
+              <div className='max-w-[85ch] mr-24 p-2 text-right flex flex-col border-r-8 border-b-4
+             border-yellow-300'  data-aos="fade-down-left" data-aos-once="true" data-aos-duration="900">
                 <div className='text-3xl font-bold  leading-6 text-yellow-300 animate-pulse'>{headings[4].h1}</div>  
                 <div className='text-sm font-normal text-zinc-700'>
                   <p>{para[3].p}</p>
