@@ -6,6 +6,7 @@ import Edit from './Edit'
 
 function Action() {
     const updateRef = useRef();
+    const editRef = useRef();
 
     const [isDeleteOpen,setIsDeleteOpen]=useState(false)
     const deletes=()=>{
@@ -14,12 +15,12 @@ function Action() {
     const [isEditOpen,setIsEditOpen]=useState(false)
     const edits=()=>{
         // setIsEditOpen(true)
-        updateReff.current.showModal();
+        editRef.current.showModal();
     }
     const [isUpdateOpen,setUpdateOpen]=useState(false)
     const updates=()=>{
         // setUpdateOpen(true)
-        // updateRef.current.showModal();
+        updateRef.current.showModal();
         console.log('hey')
     }
   return (
@@ -32,8 +33,8 @@ function Action() {
             <div><button onClick={updates}
              className='px-2 bg-green-400 rounded-md'>Update</button></div>
             {isDeleteOpen && <Delete/>}
-            <Edit updateReff={updateReff}/>
-            {/* <Update updateRef={updateRef} /> */}
+            <Edit editRef={editRef}/>
+            <Update updateRef={updateRef} />
             
             
         </div>
