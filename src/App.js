@@ -52,6 +52,8 @@ import TicketBook from './CLZ/Book/TicketBook';
 import Map from './CLZ/Contact/Map';
 import About from './CLZ/About us/About';
 import Signin from './CLZ/Login/Signin';
+import Delete from './Components/Page Component/LoginForm/Delete';
+import Action from './Components/Page Component/LoginForm/Action';
 
 function App() {
   return (
@@ -118,20 +120,22 @@ function App() {
       {/* <NewHooks/> */}
       {/* <View/> */}
       <Login/>
+      {/* <Delete/> */}
+      <Action/>
       
       
 {/* clz */}
-    <Signin/>
-    <Logintest/>
+    {/* <Signin/> */}
+    {/* <Logintest/> */}
 
-    <Navbar/> 
-    <Home/>
+    {/* <Navbar/>  */}
+    {/* <Home/> */}
         
-    <TicketBook/>
-    <Contactus/>  
-    <Map/> 
-    <Book/>
-    <About/>
+    {/* <TicketBook/> */}
+    {/* <Contactus/>   */}
+    {/* <Map/>  */}
+    {/* <Book/> */}
+    {/* <About/> */}
     </div>
   )
 }

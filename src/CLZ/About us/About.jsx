@@ -67,12 +67,6 @@ function About() {
               </div>
             </div>
         </div>
-        {/* image ball rotate section */}
-        {/* <div className='h-screen flex justify-center items-center'>
-          <div className='w-[700px] h-[600px] bg-no-repeat bg-cover
-          bg-red-900'> djfkaj 
-          </div>
-        </div> */}
         <div className='flex justify-center font-poping text-zinc-700 text-center'>
             <div className='max-w-[105ch]'>
               {slogan[0].p}

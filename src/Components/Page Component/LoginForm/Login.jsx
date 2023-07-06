@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {Form,Formik,ErrorMessage,Field} from 'formik'
 import * as yup from 'yup'
-import View from './View'
+
 import axios from 'axios'
 
 const schema=yup.object().shape({
@@ -284,6 +284,7 @@ setFieldValue('image',e.target.files[0])
                                 }
                             })}
                         </div>
+                        {/* submit button */}
                         <div><button
                         type='submit' 
                         className='mt-5 w-60 h-16 text-base font-bbbb font-semibold tracking-widest text-hov border-2 border-hov rounded-md hover:text-white hover:bg-hov'
