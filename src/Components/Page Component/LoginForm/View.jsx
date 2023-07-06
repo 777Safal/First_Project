@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react'
 import Login from './Login'
 import axios from 'axios'
 import Delete from './Delete'
+import Action from './Action'
 
 function View() {
     const [action,setaction]=useState('add')
@@ -64,7 +65,7 @@ function View() {
                         <td className='border-2 border-black'>{val.address}</td>
                         <td className='border-2 border-black'>{val.contact_no}</td>
                         <td className='border-2 border-black'>{val.gurdain_name}</td>
-                        {/* <td className='border-2 border-black'>{val.gurdain_no}</td>
+                        <td className='border-2 border-black'>{val.gurdain_no}</td>
                         <td className='border-2 border-black'>{val.schoolName}</td>
                         <td className='border-2 border-black'>{val.Category_name}</td>
                         <td className='border-2 border-black'>{val.Course}</td>
@@ -78,11 +79,8 @@ function View() {
                         <td className='border-2 border-black'>{val.email}</td>
                         <td className='border-2 border-black'>{val.referal_contact_no}</td>
                         <td className='border-2 border-black'>{val.refered_by}</td>
-                        <td className='border-2 border-black'>{val.schoolCourseTaken}</td> */}
-                        <td className='border-2 border-black'>
-                            <div><Delete/>Delete</div>
-                        </td>
-
+                        <td className='border-2 border-black'>{val.schoolCourseTaken}</td>
+                        <th><Action/></th>
                     </tr>)
                 })}
             </tbody>

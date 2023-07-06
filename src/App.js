@@ -54,6 +54,7 @@ import About from './CLZ/About us/About';
 import Signin from './CLZ/Login/Signin';
 import Delete from './Components/Page Component/LoginForm/Delete';
 import Action from './Components/Page Component/LoginForm/Action';
+import Footer from './CLZ/Footer/Footer';
 
 function App() {
   return (
@@ -119,9 +120,9 @@ function App() {
       
       {/* <NewHooks/> */}
       {/* <View/> */}
-      <Login/>
+      {/* <Login/> */}
       {/* <Delete/> */}
-      <Action/>
+      {/* <Action/> */}
       
       
 {/* clz */}
@@ -136,6 +137,7 @@ function App() {
     {/* <Map/>  */}
     {/* <Book/> */}
     {/* <About/> */}
+    <Footer/>
     </div>
   )
 }
