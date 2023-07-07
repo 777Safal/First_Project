@@ -45,14 +45,15 @@ function Contactus() {
       },
     ]
   return (
-    <div className='w-full relative'>
+    <div className='relative'>
       {/* image section */}
-        <div className='my-10 w-full h-80 sepia bg-cover bg-center bg-no-repeat 
+        <div className='my-10 h-80 bg-cover bg-center bg-no-repeat flex justify-center items-center
       bg-[url(https://images.unsplash.com/photo-1552318965-6e6be7484ada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60)]'>
+          <div className='text-center text-5xl font-poping font-extrabold 
+          border-b-4 border-red-600 text-yellow-300 
+            '>{heading[0].h1}</div>
         </div>
-        <div className='px-0 text-center text-5xl font-poping font-extrabold 
-        border-b-4 border-red-600 text-yellow-300 absolute top-24 left-[520px] pb-2
-          '>{heading[0].h1}</div>
+        
         <div className='w-full flex mb-10  justify-center font-bbbb tracking-wider'>
           <div className='w-10/12 bg-transparent rounded-md overflow-hidden relative flex'> 
             <div className='w-2/6 py-3 pl-5 mr-10 rounded-md bg-yellow-300'

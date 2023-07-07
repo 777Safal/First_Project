@@ -124,24 +124,24 @@ function App() {
       {/* <View/> */}
       {/* <Login/> */}
       {/* <Delete/> */}
-      <Action/>
+      {/* <Action/> */}
       {/* <EditForm/> */}
       {/* <Edit/> */}
       
       
 {/* clz */}
     {/* <Signin/> */}
-    {/* <Logintest/> */}
+    <Logintest/>
 
-    {/* <Navbar/>  */}
-    {/* <Home/> */}
+    <Navbar/> 
+    <Home/>
         
-    {/* <TicketBook/> */}
-    {/* <Contactus/>   */}
-    {/* <Map/>  */}
+    <TicketBook/>
+    <Contactus/>  
+    <Map/> 
     {/* <Book/> */}
-    {/* <About/> */}
-    {/* <Footer/> */}
+    <About/>
+    <Footer/>
     </div>
   )
 }

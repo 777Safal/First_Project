@@ -24,7 +24,7 @@ function About() {
         <div className='bg-cover bg-no-repeat w-full h-60 bg-bottom flex items-center 
         justify-center
         bg-[url(https://static.africa-press.net/cape-verde/sites/66/2023/05/postQueueImg_1684141131.67.jpg)]'
-         data-aos="fade-down-right" data-aos-once="true"  >
+         data-aos="fade-right" data-aos-once="true"  >
             <div className='pb-2 text-5xl text-yellow-300 font-poping font-extrabold
             border-b-4 border-red-600'>{headings[0].h1}</div>
         </div>

@@ -32,7 +32,7 @@ function TicketBook() {
   return (
     <div className=' mt-10 relative flex justify-center'>
         <div className='w-10/12 rounded-sm  bg-yellow-300 
-        py-10 px-3 font-bbbb'>
+        py-10 px-3 font-bbbb' data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="800">
           <div className='text-zinc-700 text-base font-poping tracking-wider'>
             {paragraph[0].p}
           </div>
@@ -51,7 +51,6 @@ function TicketBook() {
           <div className='w-full flex grid grid-cols-8 gap-2 '>
               {time.map((val,i)=>{
                 return <button
-                data-aos="slide-up" data-aos-once="true"
                 className='px-3 py-4 flex justify-between rounded-md text-center 
                 text-sm font-medium bg-lime-500 hover:bg-lime-700 hover:text-white
                 transition ease-in-out delay-150 hover:translate-2 hover:scale-125 duration-300'>
