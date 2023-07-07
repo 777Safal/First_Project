@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import {Form,Formik,ErrorMessage,Field} from 'formik'
+import React from 'react'
+import {Form,Field,Formik,ErrorMessage} from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
 
@@ -24,8 +24,7 @@ const schema=yup.object().shape({
     discount:yup.string(),
     image:yup.string()
 })
-function Login() {
-   
+function EditForm() {
 
     const data=[
         {   label:'Name',
@@ -77,6 +76,9 @@ function Login() {
             identiy:'Course',
             options: [
                 {
+                    name:'Select',
+                },
+                {
                     name:'Mern',
                 },
                 {
@@ -103,6 +105,7 @@ function Login() {
             type:'select',
             identiy:'Shift',
             options:[
+                {name:'Select',},
                 {name:'Morning'},
                 {name:'Day'},
                 {name:'Evening'},
@@ -152,9 +155,9 @@ function Login() {
         },
     ]
   return (
-    <div className='pb-10 flex justify-center items-center'>
-     <div className='w-8/12 mt-10 overflow-hidden  rounded-md'>
-        <Formik
+    <div className='flex justify-center items-center'>
+        <div className='w-8/12 my-5 rounded-md '>
+            <Formik
             initialValues={{
                 Category_name:'',
                 Course:'',
@@ -179,46 +182,20 @@ function Login() {
                 schoolName:'',
                 status:'',
             }}
-                // validationSchema={schema}
-                // validationSchema={schema}
-                onSubmit={(values)=>{
-                    console.log(values)
-                    try {
-                        const formData=new FormData();
-                        formData.append('image',values.image);
-                        formData.append('Category_name',values.Category_name);
-                        formData.append('Course',values.Course);
-                        formData.append('Date',values.Date);
-                        formData.append('Gender',values.Gender);
-                        formData.append('Level_Of_Education',values.Level_of_Education);
-                        formData.append('Shift',values.Shift);
-                        formData.append('SourceOfInformation',values.SourceOfInformation);
-                        formData.append('Stage',values.Stage);
-                        formData.append('address',values.address);
-                        formData.append('contact_no',values.contact_no);
-                        formData.append('discount',values.discount);
-                        formData.append('email',values.email);
-                        formData.append('gurdain_name',values.gurdain_name);
-                        formData.append('gurdain_no',values.gurdain_no);
-                        formData.append('name',values.name);
-                        formData.append('referal_contact_no',values.referal_contact_no);
-                        formData.append('refered_by',values.refered_by);
-                        formData.append('schoolCourseTaken',values.schoolCourseTaken);
-                        formData.append('schoolName',values.schoolName);
-                        formData.append('status',values.status);
+            validationSchema={schema}
+            onSubmit={(values)=>{
+                console.log(values)
+                try {
 
-                        axios.post('http://192.168.1.147:4003/studentinfo/',formData).then(res=>{console.log(res)}).catch(err=>{console.log(err)
-
-                        })
-                    } catch (error){
-                        console.log(error)
-                    }
-                }}
+                }catch(error) {
+                    console.log(error)
+                }
+            }}
             >
-                {({handleSubmit,setFieldValue})=>{
+                {({handleSubmit,})=>{
                     return <Form onSubmit={handleSubmit}>
                         <div className='grid grid-cols-2 gap-2'>
-                            {data.map((val,i)=>{                          
+                        {data.map((val,i)=>{                          
                                 if (val.type==='select'){
                                     return (
                                         <div key={i} className='flex flex-col'>
@@ -235,18 +212,15 @@ function Login() {
                                 }
                                 else {
                                     if(val.subdata){
-                                        return <div key={i} className='flex flex-col text-base text-gray-500
+                                        return <div key={i} className='h-20  flex flex-col text-base text-gray-500
                                         font-bbbb font-medium'>
                                             <label >{val.label}</label>
-                                            <div className='mt-3 pl-14 flex flex-row'>
+                                            <div className=' pl-14 flex flex-row'>
                                                 {val.subdata && val.subdata.map((item,index)=>{
                                                     return <div key={index} className='mr-3 '>
                                                         <lable className='mr-1 text-sm text-gray-500
                                              font-bbbb font-medium'>{item.label}</lable>
-                                                        <input onChange={(e)=>{
-                                                            setFieldValue('Gender',e.target.value)
-                                                        }} type={item.type} name={val.label} />
-                                                        
+                                                        <input type={item.type} name={val.label} />     
                                                     </div>
                                                 })}
                                             </div>
@@ -256,24 +230,22 @@ function Login() {
                                     }
                                     else {
                                         if(val.type==='file'){
-                                            return <div key={i} className=''>
+                                            return <div key={i} className='h-20 flex flex-col'>
                                                 <label className='text-base text-gray-500
                                              font-bbbb font-medium mb-1'>{val.label}</label>
-                                             <input  onChange={(e)=>{
-setFieldValue('image',e.target.files[0])
-                                             }}  type={'file'} name={val.identiy} className='bg-gray-100 
-                                             text-gray-500 outline-none px-1 py-2 rounded-md'/>
+                                             <input type={'file'} name={val.identiy} className='bg-gray-100 
+                                             text-gray-500 outline-none px-1  rounded-md'/>
                                             </div>
                                         }
                                         else{
-                                            return <div key={i} className='flex flex-col mb-2 justify-center'>
+                                            return <div key={i} className='h-20 flex flex-col'>
                                             <label className='text-base text-gray-500
                                              font-bbbb font-medium mb-1'>
                                                 {val.label}
                                             </label>
                                             <Field type={val.type} name={val.identiy} 
                                             className='bg-gray-100 text-gray-500
-                                            outline-none px-1 py-2 rounded-md'
+                                            outline-none px-1 py-1 rounded-md'
                                             />
                                             <ErrorMessage name={val.identiy} component={'div'}
                                             className='text-red-400 text-sm font-semibold'/>
@@ -283,15 +255,10 @@ setFieldValue('image',e.target.files[0])
                                 }
                             })}
                         </div>
-                        {/* submit button */}
                         <div><button
                         type='submit' 
                         className='mt-5 w-60 h-16 text-base font-bbbb font-semibold tracking-widest text-hov border-2 border-hov rounded-md hover:text-white hover:bg-hov'
-                        >Submit</button></div>
-                        {/* <div className='flex justify-between my-10'>
-                            <div><button onClick={()=>setaction('add')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md' >Add</button></div>
-                            <div><button onClick={()=>setaction('view')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md'>View</button></div>
-                        </div> */}
+                        >Done</button></div>
                     </Form>
                 }}
             </Formik>
@@ -300,5 +267,4 @@ setFieldValue('image',e.target.files[0])
   )
 }
 
-export default Login
-
+export default EditForm

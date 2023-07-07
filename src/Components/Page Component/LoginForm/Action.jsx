@@ -7,10 +7,12 @@ import Edit from './Edit'
 function Action() {
     const updateRef = useRef();
     const editRef = useRef();
+    const deleteRef = useRef();
 
     const [isDeleteOpen,setIsDeleteOpen]=useState(false)
     const deletes=()=>{
-        setIsDeleteOpen(true)
+        // setIsDeleteOpen(true)
+        deleteRef.current.showModal();
     }
     const [isEditOpen,setIsEditOpen]=useState(false)
     const edits=()=>{
@@ -32,7 +34,7 @@ function Action() {
             className='px-2 bg-red-400 rounded-md'>Delet</button></div>
             <div><button onClick={updates}
              className='px-2 bg-green-400 rounded-md'>Update</button></div>
-            {isDeleteOpen && <Delete/>}
+            <Delete deleteRef={deleteRef}/>
             <Edit editRef={editRef}/>
             <Update updateRef={updateRef} />
             

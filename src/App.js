@@ -55,6 +55,8 @@ import Signin from './CLZ/Login/Signin';
 import Delete from './Components/Page Component/LoginForm/Delete';
 import Action from './Components/Page Component/LoginForm/Action';
 import Footer from './CLZ/Footer/Footer';
+import EditForm from './Components/Page Component/LoginForm/EditForm';
+import Edit from './Components/Page Component/LoginForm/Edit';
 
 function App() {
   return (
@@ -122,7 +124,9 @@ function App() {
       {/* <View/> */}
       {/* <Login/> */}
       {/* <Delete/> */}
-      {/* <Action/> */}
+      <Action/>
+      {/* <EditForm/> */}
+      {/* <Edit/> */}
       
       
 {/* clz */}
@@ -137,7 +141,7 @@ function App() {
     {/* <Map/>  */}
     {/* <Book/> */}
     {/* <About/> */}
-    <Footer/>
+    {/* <Footer/> */}
     </div>
   )
 }
