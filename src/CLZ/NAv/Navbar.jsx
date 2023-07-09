@@ -7,6 +7,13 @@ function Navbar() {
         {h1:'ABOUT US'},
         {h1:'CONTACT US'},
     ]
+
+    const href= [
+        '#',
+        '#ticketBook',
+        '#about',
+        '#contact'
+    ]
   return (
     <div className='h-16  flex items-center justify-center bg-yellow-300'>
         <div className='w-10/12 flex items-center justify-between text-sm font-bbbb font-normal'>
@@ -17,13 +24,13 @@ function Navbar() {
                 </div>
                 <div className='text-center text-lg font-bold text-red-600'>Monalisa Futsal</div>
             </div>
-            <div className=' flex grid grid-cols-4'>
+            <ul className='flex gap-3 items-center'>
             {data.map((val,i)=>{
-                return <div key={i} className=''>
-                    <div className='px-3 py-2 text-center rounded-lg hover:bg-red-600 hover:text-white cursor-pointer'>{val.h1}</div>
-                </div>
+                return <li key={i} className=''>
+                    <a href={href[i]} className='px-3 py-2 text-center rounded-lg hover:bg-red-600 hover:text-white'>{val.h1}</a>
+                </li>
             })}
-            </div>
+            </ul>
             <div className='px-3 py-2 text-left rounded-lg hover:bg-red-600 hover:text-white cursor-pointer'>Login</div>
         </div>
     </div>

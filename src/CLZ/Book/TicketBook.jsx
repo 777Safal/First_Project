@@ -30,7 +30,7 @@ function TicketBook() {
         {p:'Join us in the battle of the fastest feet, where every touch of the ball sends a surge of excitement through the crowd. Lace up your boots and become a maestro of futsal in the arena!'}
       ]
   return (
-    <div className=' mt-10 relative flex justify-center'>
+    <div id="ticketBook" className=' mt-10 relative flex justify-center'>
         <div className='w-10/12 rounded-sm  bg-yellow-300 
         py-10 px-3 font-bbbb' data-aos="zoom-in-up" data-aos-once="true" data-aos-duration="800">
           <div className='text-zinc-700 text-base font-poping tracking-wider'>

@@ -45,7 +45,7 @@ function Contactus() {
       },
     ]
   return (
-    <div className='relative'>
+    <div id="contact" className='relative'>
       {/* image section */}
         <div className='my-10 h-80 bg-cover bg-center bg-no-repeat flex justify-center items-center
       bg-[url(https://images.unsplash.com/photo-1552318965-6e6be7484ada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60)]'>

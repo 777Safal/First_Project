@@ -57,6 +57,9 @@ import Action from './Components/Page Component/LoginForm/Action';
 import Footer from './CLZ/Footer/Footer';
 import EditForm from './Components/Page Component/LoginForm/EditForm';
 import Edit from './Components/Page Component/LoginForm/Edit';
+import JustTest from './JustTest';
+import { Route, Routes } from 'react-router-dom';
+import PrivateHome from './CLZ/private/Home';
 
 function App() {
   return (
@@ -131,18 +134,22 @@ function App() {
       
 {/* clz */}
     {/* <Signin/> */}
-    <Logintest/>
+    {/* <Logintest/> */}
 
-    <Navbar/> 
-    <Home/>
-        
-    <TicketBook/>
-    <Contactus/>  
-    <Map/> 
-    {/* <Book/> */}
-    <About/>
-    <Footer/>
+    <Routes>
+      {/* public routes */}
+      <Route path='/login' element={<Logintest />} />
+      <Route path='/signup' element={<Signin />} />
+
+      {/* private routes */}
+      <Route path="/dash" element={<PrivateHome />} />
+    </Routes>
+
+    
+    {/* just test only  */}
+    {/* <JustTest/> */}
     </div>
+
   )
 }
 

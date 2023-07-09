@@ -20,7 +20,7 @@ function About() {
         {p:'At MonaLisa Futsal Booking, we are committed to fostering a strong futsal community. We organize regular tournaments, leagues, and special events, giving players the opportunity to showcase their skills and connect with fellow enthusiasts. We believe in the power of futsal to bring people together, and we actively support local initiatives and charities to give back to the community we serve.'}
     ]
   return (
-    <div className='mb-10'>
+    <div id="about" className='mb-10'>
         <div className='bg-cover bg-no-repeat w-full h-60 bg-bottom flex items-center 
         justify-center
         bg-[url(https://static.africa-press.net/cape-verde/sites/66/2023/05/postQueueImg_1684141131.67.jpg)]'
