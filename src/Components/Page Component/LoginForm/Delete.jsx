@@ -1,9 +1,12 @@
-import Reac,{useRef} from 'react'
+import Reac,{useRef,useState} from 'react'
 import {RiDeleteBin5Line} from 'react-icons/ri'
 
 function Delete({deleteRef}) {
+  const [deleted,setDeleted]=useState(false)
+  const confirmDelete =()={
+
+  }
   return (
-    
         <dialog ref={deleteRef}>
           <div className='w-fit h-fit m-auto'><RiDeleteBin5Line className='text-7xl text-red-600'/></div>
             <div className='w-fit mx-auto'>

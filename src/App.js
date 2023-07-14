@@ -45,7 +45,7 @@ import NewHooks from './Pages/NewHooks';
 import Login from './Components/Page Component/LoginForm/Index';
 import View from './Components/Page Component/LoginForm/View';
 import Navbar from './CLZ/NAv/Navbar';
-import Home from './CLZ/Home/Home';
+
 import Book from './CLZ/Home/Book';
 import Contactus from './CLZ/Contact/Contactus';
 import TicketBook from './CLZ/Book/TicketBook';
@@ -60,6 +60,7 @@ import Edit from './Components/Page Component/LoginForm/Edit';
 import JustTest from './JustTest';
 import { Route, Routes } from 'react-router-dom';
 import PrivateHome from './CLZ/private/Home';
+import Home from './CLZ/private/Home'
 
 function App() {
   return (
@@ -136,18 +137,14 @@ function App() {
     {/* <Signin/> */}
     {/* <Logintest/> */}
 
-    <Routes>
-      {/* public routes */}
-      <Route path='/login' element={<Logintest />} />
-      <Route path='/signup' element={<Signin />} />
-
-      {/* private routes */}
-      <Route path="/dash" element={<PrivateHome />} />
-    </Routes>
+    
 
     
     {/* just test only  */}
     {/* <JustTest/> */}
+
+
+    <Home/>
     </div>
 
   )

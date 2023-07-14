@@ -15,10 +15,10 @@ const PrivateHome = () => {
 
       <TicketBook />
       <Contact />
-      <Map />
+      {/* <Map /> */}
       {/* <Book/> */}
       <About />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
