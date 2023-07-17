@@ -128,7 +128,7 @@ function App() {
       {/* <NewHooks/> */}
       {/* <View/> */}
       <Nav/>
-      <Login/>
+      {/* <Login/> */}
       
       {/* <Delete/> */}
       {/* <Action/> */}
