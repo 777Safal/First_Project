@@ -284,14 +284,9 @@ setFieldValue('image',e.target.files[0])
                             })}
                         </div>
                         {/* submit button */}
-                        <div><button
-                        type='submit' 
+                        <div><button type='submit' 
                         className='mt-5 w-60 h-16 text-base font-bbbb font-semibold tracking-widest text-hov border-2 border-hov rounded-md hover:text-white hover:bg-hov'
                         >Submit</button></div>
-                        {/* <div className='flex justify-between my-10'>
-                            <div><button onClick={()=>setaction('add')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md' >Add</button></div>
-                            <div><button onClick={()=>setaction('view')} className='w-56 h-14 bg-scholarship2 text-white font-bbbb text-base rounded-md'>View</button></div>
-                        </div> */}
                     </Form>
                 }}
             </Formik>

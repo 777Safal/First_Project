@@ -61,6 +61,7 @@ import JustTest from './JustTest';
 import { Route, Routes } from 'react-router-dom';
 import PrivateHome from './CLZ/private/Home';
 import Home from './CLZ/private/Home'
+import Nav from './Components/Work/Nav';
 
 function App() {
   return (
@@ -126,7 +127,9 @@ function App() {
       
       {/* <NewHooks/> */}
       {/* <View/> */}
-      {/* <Login/> */}
+      <Nav/>
+      <Login/>
+      
       {/* <Delete/> */}
       {/* <Action/> */}
       {/* <EditForm/> */}
@@ -144,7 +147,7 @@ function App() {
     {/* <JustTest/> */}
 
 
-    <Home/>
+    {/* <Home/> */}
     </div>
 
   )
